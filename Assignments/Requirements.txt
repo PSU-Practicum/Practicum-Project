@@ -1,0 +1,29 @@
+T18
+Requirements
+Revision 0.0
+
+Game Mechanics Requirements
+•	The game must indicate to the player valid moves.
+
+•	Must indicate when a player has made an invalid move.
+
+•	Must recognize when a round is completed.
+
+•	Game should distinguish between players.
+
+•	At the beginning of a round it must indicate starting positions for all game pieces.
+
+
+Physical Requirements
+•	Game board top should be resistant to liquid being spilled on it.
+
+•	Low power; should not consume more than 20 Watts.
+
+•	Must comfortably fit on a table top.
+
+•	Should be durable enough to be easily transported and stored. 
+
+User Requirements
+•	Should be aesthetically pleasing.
+
+•	Intuitive to use.   Should not require a user manual if one is familiar with rules of the game.
