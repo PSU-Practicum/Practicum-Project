@@ -1,7 +1,0 @@
-E-Tablero
-	*matrix design
-		needed for parts order asap
-	box design
-	PCB design
-	Algorithm
-	power supply 
