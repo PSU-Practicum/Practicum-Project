@@ -1,0 +1,62 @@
+Tablero
+	[+] Enable a game of tablero to be played with enhanced experience
+	->* +5V
+	->* user input
+	*-> Grid lighting data
+	*-> LCD display data
+	(*) Roll Button
+		->* user input
+		*-> Roll
+	(*) Reset Button
+		->* user input
+		*-> Reset
+	(*) on/off Switch
+		->* user input
+		->* +5V
+		*-> on/off
+	(*) switch matrix
+		->* Switch matrix active row
+		->* user input (piece placement)
+		*-> Active row switch states
+	(*) LED strand
+		->* +5V
+		->* Grid lighting data
+		*-> Game feedback
+	(*) LCD display
+		->* +3.3V
+		->* LCD display data
+		*-> Game feedback
+	(*) PCB
+		->* power
+		->* roll
+		->* reset
+		->* on/off
+		->* Active row switch states
+		*-> Grid lighting data
+		*-> LCD display data
+		(*) Voltage regulator
+			->* 5V
+			*-> 3.3V
+		(*) uP	
+			->* Active row switch states
+			->* roll
+			->* reset
+			*-> Switch matrix active row
+			*-> Grid lighting data 
+			*-> LCD display data
+			(*) uP program
+				{
+				(*) Finite State Machine
+					[+] track gameplay
+				(*) Row change timer
+					[+] change row on periodic basis
+				(*) onRowChange()
+					[+] update inputs and FSM
+				(*) rollDice()
+					[+] generate random dice rolls
+					*-> Roll result
+				(*) writeToDisplay()
+					->* what to write (string)
+				(*) updateLEDs()
+					->* Grid colors (square struct array members)
+				}
