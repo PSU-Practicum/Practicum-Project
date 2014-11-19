@@ -1,3 +1,5 @@
+//https://bitbucket.org/fmalpartida/lcd_c0220biz-display-driver/wiki/Home. nhd co220biz library
+
 // TWI initialization
 //TWI registers
 //TWBR bit register to scale down freq in to SCL
