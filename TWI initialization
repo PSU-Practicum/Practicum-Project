@@ -1,0 +1,55 @@
+// TWI initialization
+//TWI registers
+//TWBR bit register to scale down freq in to SCL
+//TWSR status register to prescale SCL freq
+//TWCR control register to enable TWI interrupt,Enable,Start,Stop
+//TWDR data register to holld next byte to transmit or receive
+
+
+
+void TWIInit(void)  //initialize TWI
+{
+	TWSR = 0x00;  
+	TWBR = 0x0C;  //SCL frequency = CPU clk freq/(16+2*TWBR*PrescalerValue)
+	TWCR = (1<<TWEN); //enable TWI
+}
+
+void TWIStart(void)  //start signal.I2c idle-> SCL, SDA must be both high
+{
+	TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN); 
+	while ((TWCR & (1<<TWINT)) == 0);
+}
+
+void TWIStop(void)  //stop signal. SDA low to high, SCL high
+{
+	TWCR = (1<<TWINT)|(1<<TWSTO)|(1<<TWEN);
+}
+
+void TWIWrite(uint8_t u8data) //TWIwrite
+{
+    TWDR = u8data;
+    TWCR = (1<<TWINT)|(1<<TWEN);
+    while ((TWCR & (1<<TWINT)) == 0);
+}
+
+uint8_t TWIReadACK(void) //read byte with ACK
+{
+    TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWEA);
+    while ((TWCR & (1<<TWINT)) == 0);
+    return TWDR;
+}
+
+uint8_t TWIReadNACK(void) //read byte with NACK
+{
+    TWCR = (1<<TWINT)|(1<<TWEN);
+    while ((TWCR & (1<<TWINT)) == 0);
+    return TWDR;
+}
+
+uint8_t TWIGetStatus(void) //TWIread
+{
+    uint8_t status;
+    //mask status
+    status = TWSR & 0xF8;
+    return status;
+}
