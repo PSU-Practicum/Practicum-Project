@@ -1,68 +1,206 @@
 //https://bitbucket.org/fmalpartida/lcd_c0220biz-display-driver/wiki/Home. nhd co220biz library
 
-// TWI initialization
+//TWI initialization
 //TWI registers
 //TWBR bit register to scale down freq in to SCL
 //TWSR status register to prescale SCL freq
 //TWCR control register to enable TWI interrupt,Enable,Start,Stop
 //TWDR data register to holld next byte to transmit or receive
 
+#include <stdio.h>
+#include <avr/io.h>#include <stdio.h>
+#include <avr/io.h>
 
+#define I2C_SDA PINC4   // Serial Data line
+#define I2C_SCL PINC5   // Serial Clock line
 
-void TWIInit(void)  //initialize TWI
+/* A delay function.  */
+void delay( unsigned int n )
 {
-	TWSR = 0x00;  
-	TWBR = 0x0C;  //SCL frequency = CPU clk freq/(16+2*TWBR*PrescalerValue)
-	TWCR = (1<<TWEN); //enable TWI
+    volatile int i;
+
+    for( ; n; n-- ) {
+        for( i = 0; i < 50; i++ );
+    }
 }
 
-void TWIStart(void)  //start signal.I2c idle-> SCL, SDA must be both high
-{
-	TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN); 
-	while ((TWCR & (1<<TWINT)) == 0);
+void data_read(void ) {
+    DDRC &= ~I2C_SDA; // float to get ready to read
 }
 
-void TWIStop(void)  //stop signal. SDA low to high, SCL high
-{
-	TWCR = (1<<TWINT)|(1<<TWSTO)|(1<<TWEN);
+void data_high(void ) {
+    DDRC &= ~I2C_SDA; // float pin to go high
+    delay( 5 );
 }
 
-void TWIWrite(uint8_t u8data) //TWIwrite
+void data_low(void ) {
+    PORTC &= ~I2C_SDA; // assert low
+    DDRC |= I2C_SDA;
+    delay( 5 );
+}
+
+void clk_high(void) {
+    DDRC &= ~I2C_SCL;  // float pin to go high
+    delay( 10 );
+}
+
+void clk_low(void) {
+    PORTC &= ~I2C_SCL;  // assert low
+    DDRC |= I2C_SCL;
+    delay( 5 );
+}
+
+/* I2C communication starts when both the data and clock
+ * lines go low, in that order. */
+void I2C_Init(void)
+{
+    //set SCL to 400kHz
+    TWSR = 0x00;
+    TWBR = 0x0C;
+    //enable TWI
+    TWCR = (1<<TWEN);
+}
+
+ void I2C_Start(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);
+    while ((TWCR & (1<<TWINT)) == 0);
+}
+//void I2C_Start(void) {
+//    clk_high();
+//   data_high();
+//    data_low();
+//    clk_low();
+//}
+
+/* I2C communication stops with both the clock and data
+ * lines going high, in that order. */
+
+ void I2C_Stop(void)
+{
+    TWCR = (1<<TWINT)|(1<<TWSTO)|(1<<TWEN);
+}
+//void I2C_Stop(void) {
+//   data_low();
+//    clk_low();
+//    clk_high();
+//    data_high();
+}
+
+void I2C_Write(uint8_t u8data)
 {
     TWDR = u8data;
     TWCR = (1<<TWINT)|(1<<TWEN);
     while ((TWCR & (1<<TWINT)) == 0);
 }
-
-uint8_t TWIReadACK(void) //read byte with ACK
+uint8_t I2C_ACK(void)
 {
     TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWEA);
     while ((TWCR & (1<<TWINT)) == 0);
     return TWDR;
 }
-
-uint8_t TWIReadNACK(void) //read byte with NACK
+//read byte with NACK
+uint8_t I2C_ReadNACK(void)
 {
     TWCR = (1<<TWINT)|(1<<TWEN);
     while ((TWCR & (1<<TWINT)) == 0);
     return TWDR;
 }
 
-uint8_t TWIGetStatus(void) //TWIread
-{
-    uint8_t status;
-    //mask status
-    status = TWSR & 0xF8;
-    return status;
+/* Outputs 8-bit command or data via I2C lines. */
+void I2C_out(unsigned char d) {
+    int n;
+
+    for( n = 0; n < 8; n++ ) {
+        if( d & 0x80 ) {
+            data_high();
+        } else {
+            data_low();
+        }
+
+        clk_high();
+        clk_low();
+
+        d <<= 1;        // Shift next bit into position.
+    }
+
+    data_read();        // Set data line to receive.
+    clk_high();         // Clock goes high to wait for acknowledge.
+
+    // Slave will pull data line low to acknowledge.
+    while( PINC & I2C_SDA ) {
+        // Else toggle the clock line and check again
+        clk_low();
+        clk_high();
+    }
+
+    clk_low();
 }
--------------------------------------------------------------
-//header twi
-#include <avr/io.h>
-void TWIInit(void);
-void TWIStart(void);
-void TWIStop(void);
-void TWIWrite(uint8_t u8data);
-uint8_t TWIReadACK(void);
-uint8_t TWIReadNACK(void);
-uint8_t TWIGetStatus(void);
-#endif 
+
+/* Initializes the LCD panel. */
+void init_LCD(void) {
+    I2C_Start();
+
+    I2C_out( 0x78 );    // Slave address of the LCD panel.
+    I2C_out( 0x00 );    // Control byte: all following bytes are commands.
+    I2C_out( 0x38 );    // 8-bit bus, 2-line display, normal instruction mode.
+    delay( 10 );
+
+    I2C_out( 0x39 );    // 8-bit bus, 2-line display, extension instruction mode.
+    delay( 10 );
+
+    I2C_out( 0x14 );    // Bias set to 1/5.
+    I2C_out( 0x78 );    // Contrast set.
+    I2C_out( 0x5E );    //
+    I2C_out( 0x6D );    // 
+    I2C_out( 0x0C );    // Display on, cursor off.
+    I2C_out( 0x01 );    // Clear display.
+    I2C_out( 0x06 );    // Entry mode set to cursor-moves-right.
+    delay( 10 );
+
+    I2C_Stop();
+}
+
+/* Sends the "clear display" command to the LCD. */
+void clear_display(void) {
+    I2C_Start();
+
+    I2C_out( 0x78 ); // Slave address of panel.
+    I2C_out( 0x00 ); // Control byte: all following bytes are commands.
+    I2C_out( 0x01 ); // Clear display.
+
+    I2C_Stop();
+}
+
+/* Writes a 20-char string to the RAM of the LCD. */
+void show( unsigned char *text ) {
+    int n;
+
+    I2C_Start();
+
+    I2C_out( 0x78 ); // Slave address of panel.
+    I2C_out( 0x40 ); // Control byte: data bytes follow, data is RAM data.
+
+    for( n = 0; n < 20; n++ ) {
+        I2C_out( *text );
+        text++;
+    }
+
+    I2C_Stop();
+}
+
+int main(void) 
+{
+	
+    int i;
+
+ 
+	I2C_Init();
+    init_LCD();
+
+    show( "Hello, world.       " );
+    clear_display();
+    show( "Goodbye, world.     " );
+
+}
+
