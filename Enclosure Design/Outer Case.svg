@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="36in"
+   height="18in"
+   viewBox=" 0 0 3240 1620"
+   id="svg2"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="caseplans (4).svg">
+  <metadata
+     id="metadata32">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs30" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="988"
+     id="namedview28"
+     showgrid="false"
+     inkscape:zoom="1.1034358"
+     inkscape:cx="490.11767"
+     inkscape:cy="645.93927"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <!-- Front-->
+  <!-- Back-->
+  <!-- Left-->
+  <!-- Right-->
+  <!-- Top-->
+  <!-- Bottom-->
+  <g
+     id="g3855"
+     transform="translate(110.22152,-217.87975)">
+    <rect
+       y="673.60559"
+       x="-72.337006"
+       height="325.04883"
+       width="943.79883"
+       id="rect3009-1"
+       style="fill:none;stroke:#000000;stroke-width:1.20117652px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3034"
+       y="844.60443"
+       x="314.00314"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="844.60443"
+         x="314.00314"
+         id="tspan3036"
+         sodipodi:role="line">Divider</tspan></text>
+  </g>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:0.99725479px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="rect3009"
+     width="944.00275"
+     height="224.00275"
+     x="36.332073"
+     y="788.69775" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
+     x="683.24176"
+     y="984.48138"
+     id="text3043"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3045"
+       x="683.24176"
+       y="984.48138">Display Panel</tspan></text>
+  <g
+     id="g3883">
+    <g
+       id="g16"
+       transform="translate(2002.5, 382.5) ">
+      <polygon
+         id="polygon18"
+         points="21.24, 0 105.74999999999999, 0 105.74999999999999, 21.24 211.49999999999997, 21.24 211.49999999999997, 0 283.5, 0 283.5, 21.24 355.5, 21.24 355.5, 0 427.5, 0 427.5, 21.24 499.5, 21.24 499.5, 0 571.5, 0 571.5, 21.24 643.5, 21.24 643.5, 0 715.5, 0 715.5, 21.24 787.5, 21.24 787.5, 0 859.5, 0 859.5, 21.24 931.5, 21.24 931.5, 0 1003.5, 0 1003.5, 21.24 1109.25, 21.24 1109.25, 0 1193.76, 0 1193.76, 72 1215, 72 1215, 144 1193.76, 144 1193.76, 216 1215, 216 1215, 288 1193.76, 288 1193.76, 360 1109.25, 360 1109.25, 338.76 1003.5, 338.76 1003.5, 360 931.5, 360 931.5, 338.76 859.5, 338.76 859.5, 360 787.5, 360 787.5, 338.76 715.5, 338.76 715.5, 360 643.5, 360 643.5, 338.76 571.5, 338.76 571.5, 360 499.5, 360 499.5, 338.76 427.5, 338.76 427.5, 360 355.5, 360 355.5, 338.76 283.5, 338.76 283.5, 360 211.49999999999997, 360 211.49999999999997, 338.76 105.74999999999999, 338.76 105.74999999999999, 360 21.24, 360 21.24, 288 0, 288 0, 216 21.24, 216 21.24, 144 0, 144 0, 72 21.24, 72 "
+         style="stroke:#000000; fill:none; stroke-width:0.9" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3047"
+       y="598.5285"
+       x="2300.5537"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="598.5285"
+         x="2300.5537"
+         id="tspan3049"
+         sodipodi:role="line">Side</tspan></text>
+  </g>
+  <g
+     id="g3889">
+    <g
+       id="g12"
+       transform="translate(2002.5, 22.5) ">
+      <polygon
+         id="polygon14"
+         points="21.24, 0 105.74999999999999, 0 105.74999999999999, 21.24 211.49999999999997, 21.24 211.49999999999997, 0 283.5, 0 283.5, 21.24 355.5, 21.24 355.5, 0 427.5, 0 427.5, 21.24 499.5, 21.24 499.5, 0 571.5, 0 571.5, 21.24 643.5, 21.24 643.5, 0 715.5, 0 715.5, 21.24 787.5, 21.24 787.5, 0 859.5, 0 859.5, 21.24 931.5, 21.24 931.5, 0 1003.5, 0 1003.5, 21.24 1109.25, 21.24 1109.25, 0 1193.76, 0 1193.76, 72 1215, 72 1215, 144 1193.76, 144 1193.76, 216 1215, 216 1215, 288 1193.76, 288 1193.76, 360 1109.25, 360 1109.25, 338.76 1003.5, 338.76 1003.5, 360 931.5, 360 931.5, 338.76 859.5, 338.76 859.5, 360 787.5, 360 787.5, 338.76 715.5, 338.76 715.5, 360 643.5, 360 643.5, 338.76 571.5, 338.76 571.5, 360 499.5, 360 499.5, 338.76 427.5, 338.76 427.5, 360 355.5, 360 355.5, 338.76 283.5, 338.76 283.5, 360 211.49999999999997, 360 211.49999999999997, 338.76 105.74999999999999, 338.76 105.74999999999999, 360 21.24, 360 21.24, 288 0, 288 0, 216 21.24, 216 21.24, 144 0, 144 0, 72 21.24, 72 "
+         style="stroke:#000000; fill:none; stroke-width:0.9" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3051"
+       y="193.52847"
+       x="2250.5696"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="193.52847"
+         x="2250.5696"
+         id="tspan3053"
+         sodipodi:role="line">Side</tspan></text>
+  </g>
+  <g
+     id="g3866">
+    <g
+       id="g8"
+       transform="translate(1012.5, 22.5) ">
+      <polygon
+         id="polygon10"
+         points="0, 0 121.49999999999997, 0 121.49999999999997, 21.24 242.99999999999994, 21.24 242.99999999999994, 0 314.99999999999994, 0 314.99999999999994, 21.24 386.99999999999994, 21.24 386.99999999999994, 0 458.99999999999994, 0 458.99999999999994, 21.24 531, 21.24 531, 0 603, 0 603, 21.24 675, 21.24 675, 0 747, 0 747, 21.24 868.4999999999999, 21.24 868.4999999999999, 0 990, 0 990, 72 968.76, 72 968.76, 144 990, 144 990, 216 968.76, 216 968.76, 288 990, 288 989.9999999999999, 360 868.4999999999999, 360 868.4999999999999, 338.76 747, 338.76 747, 360 675, 360 675, 338.76 603, 338.76 603, 360 531, 360 531, 338.76 458.99999999999994, 338.76 458.99999999999994, 360 386.99999999999994, 360 386.99999999999994, 338.76 314.99999999999994, 338.76 314.99999999999994, 360 242.99999999999994, 360 242.99999999999994, 338.76 121.49999999999997, 338.76 121.49999999999997, 360 0, 360 0, 288 21.24, 288 21.24, 216 0, 216 0, 144 21.24, 144 21.24, 72 0, 72 "
+         style="stroke:#000000; fill:none; stroke-width:0.9" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3055"
+       y="207.62659"
+       x="1336.7563"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="207.62659"
+         x="1336.7563"
+         id="tspan3057"
+         sodipodi:role="line">Back</tspan></text>
+  </g>
+  <g
+     id="g3860">
+    <g
+       id="g4"
+       transform="translate(22.5, 22.5) ">
+      <polygon
+         id="polygon6"
+         points="0, 0 121.49999999999997, 0 121.49999999999997, 21.24 242.99999999999994, 21.24 242.99999999999994, 0 314.99999999999994, 0 314.99999999999994, 21.24 386.99999999999994, 21.24 386.99999999999994, 0 458.99999999999994, 0 458.99999999999994, 21.24 531, 21.24 531, 0 603, 0 603, 21.24 675, 21.24 675, 0 747, 0 747, 21.24 868.4999999999999, 21.24 868.4999999999999, 0 990, 0 990, 72 968.76, 72 968.76, 144 990, 144 990, 216 968.76, 216 968.76, 288 990, 288 989.9999999999999, 360 868.4999999999999, 360 868.4999999999999, 338.76 747, 338.76 747, 360 675, 360 675, 338.76 603, 338.76 603, 360 531, 360 531, 338.76 458.99999999999994, 338.76 458.99999999999994, 360 386.99999999999994, 360 386.99999999999994, 338.76 314.99999999999994, 338.76 314.99999999999994, 360 242.99999999999994, 360 242.99999999999994, 338.76 121.49999999999997, 338.76 121.49999999999997, 360 0, 360 0, 288 21.24, 288 21.24, 216 0, 216 0, 144 21.24, 144 21.24, 72 0, 72 "
+         style="stroke:#000000; fill:none; stroke-width:0.9" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3059"
+       y="199.93671"
+       x="261.45569"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="199.93671"
+         x="261.45569"
+         id="tspan3061"
+         sodipodi:role="line">Front</tspan></text>
+  </g>
+  <g
+     id="g3872">
+    <g
+       id="g24"
+       transform="translate(1012.5, 382.5) ">
+      <polygon
+         id="polygon26"
+         points="21.24, 21.24 121.49999999999997, 21.24 121.49999999999997, 0 242.99999999999994, 0 242.99999999999994, 21.24 314.99999999999994, 21.24 314.99999999999994, 0 386.99999999999994, 0 386.99999999999994, 21.24 458.99999999999994, 21.24 458.99999999999994, 0 531, 0 531, 21.24 603, 21.24 603, 0 675, 0 675, 21.24 747, 21.24 747, 0 868.4999999999999, 0 868.4999999999999, 21.24 968.76, 21.24 968.76, 105.74999999999999 990, 105.74999999999999 990, 211.49999999999997 968.76, 211.49999999999997 968.76, 283.5 990, 283.5 990, 355.5 968.76, 355.5 968.76, 427.5 990, 427.5 990, 499.5 968.76, 499.5 968.76, 571.5 990, 571.5 990, 643.5 968.76, 643.5 968.76, 715.5 990, 715.5 990, 787.5 968.76, 787.5 968.76, 859.5 990, 859.5 990, 931.5 968.76, 931.5 968.76, 1003.5 990, 1003.5 990, 1109.25 968.76, 1109.25 968.7599999999999, 1193.76 868.4999999999999, 1193.76 868.4999999999999, 1215 747, 1215 747, 1193.76 675, 1193.76 675, 1215 603, 1215 603, 1193.76 531, 1193.76 531, 1215 458.99999999999994, 1215 458.99999999999994, 1193.76 386.99999999999994, 1193.76 386.99999999999994, 1215 314.99999999999994, 1215 314.99999999999994, 1193.76 242.99999999999994, 1193.76 242.99999999999994, 1215 121.49999999999997, 1215 121.49999999999997, 1193.76 21.24, 1193.76 21.24, 1109.25 0, 1109.25 0, 1003.5 21.24, 1003.5 21.24, 931.5 0, 931.5 0, 859.5 21.24, 859.5 21.24, 787.5 0, 787.5 0, 715.5 21.24, 715.5 21.24, 643.5 0, 643.5 0, 571.5 21.24, 571.5 21.24, 499.5 0, 499.5 0, 427.5 21.24, 427.5 21.24, 355.5 0, 355.5 0, 283.5 21.24, 283.5 21.24, 211.49999999999997 0, 211.49999999999997 0, 105.74999999999999 21.24, 105.74999999999999 "
+         style="stroke:#000000; fill:none; stroke-width:0.9" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3083"
+       y="886.89874"
+       x="1473.8925"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="886.89874"
+         x="1473.8925"
+         id="tspan3085"
+         sodipodi:role="line">Bottom</tspan></text>
+  </g>
+  <rect
+     style="fill:none;stroke:#000000;stroke-opacity:1"
+     id="rect3898"
+     width="255.1181"
+     height="99.212601"
+     x="380.77438"
+     y="851.09283" />
+</svg>

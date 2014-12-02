@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1800"
+   height="1080"
+   id="svg3016"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="LCD PANEL.svg">
+  <defs
+     id="defs3018" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="505.49786"
+     inkscape:cy="874.35239"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3920"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     units="in" />
+  <metadata
+     id="metadata3021">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,27.64025)">
+    <g
+       id="g3920"
+       transform="translate(-2708.5714,-11.428571)">
+      <rect
+         style="fill:none;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect3014"
+         width="942.12457"
+         height="222.12459"
+         x="2742.9075"
+         y="53.417244" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="M 532.125 131.09375 L 532.125 138.15625 L 517.6875 138.15625 L 517.6875 200.125 L 532.125 200.125 L 532.125 230.3125 L 787.25 230.3125 L 787.25 131.09375 L 532.125 131.09375 z "
+         transform="translate(2708.5714,-16.211679)"
+         id="rect3898" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:0.91616118;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 3050.4014,143.21432 c -15.2577,0.18512 -26.6805,17.45374 -20.8437,31.57965 4.6446,14.36891 24.3382,20.15828 36.0409,10.6557 12.4621,-8.61458 12.4149,-29.02926 -0.032,-37.61787 -4.3217,-3.26479 -9.7549,-4.88812 -15.165,-4.61748 z"
+         id="path3062"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g3938"
+         transform="translate(0,-4.8350427)">
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bauhaus 93;-inkscape-font-specification:'Bauhaus 93,'"
+           x="3018.7991"
+           y="240.34846"
+           id="text3832"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3834"
+             x="3018.7991"
+             y="240.34846">Roll</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text3836"
+           y="130.38399"
+           x="3010.0686"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bauhaus 93;-inkscape-font-specification:'Bauhaus 93,'"
+           xml:space="preserve"><tspan
+             y="130.38399"
+             x="3010.0686"
+             id="tspan3838"
+             sodipodi:role="line">Dice</tspan></text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path3936"
+         d="m 3050.0866,136.27205 c -19.7786,0.23997 -34.586,22.62521 -27.0197,40.93659 6.0208,18.62636 31.5494,26.1311 46.7197,13.81294 16.1545,-11.16705 16.0934,-37.63052 -0.042,-48.76391 -5.6022,-4.23213 -12.6452,-6.33645 -19.6583,-5.98562 z"
+         style="fill:none;stroke:#0000ff;stroke-width:1.18761635;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+  </g>
+</svg>
