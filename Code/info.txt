@@ -1,0 +1,28 @@
+/*
+ * info.txt
+ *
+ * Created: 12/11/2014 8:30:23 PM
+ *  Author: cnye
+ */ 
+
+RE-ROUTING
+B3 > D7 (3rd from bottom on outputs)
+B4 > B0 (2nd from bottom on outputs)
+B5 > B1 (bottom on the inputs)
+
+ports:
+	outs (top to bottom):
+		c3, c2, c1, c0, d7*, B0*, b1*
+	ins (top to bottom);
+		d0-d6
+		
+plug-ins:
+	plug in X from high to low index on outs header top to bottom
+	y header from top to bottom:
+		gray
+		yellow
+		black
+		red
+		white
+		brown
+		orange

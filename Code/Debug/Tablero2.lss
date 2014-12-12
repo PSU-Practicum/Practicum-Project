@@ -1,0 +1,3226 @@
+
+Tablero2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000082  00800100  000016d8  0000176c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000016d8  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000206  00800182  00800182  000017ee  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000017ee  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000168  00000000  00000000  0000181e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00001b09  00000000  00000000  00001986  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000063e  00000000  00000000  0000348f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00001a12  00000000  00000000  00003acd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000218  00000000  00000000  000054e0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000e4ee  00000000  00000000  000056f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000ba3  00000000  00000000  00013be6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000f8  00000000  00000000  00014789  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_macro  000039c6  00000000  00000000  00014881  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 40 00 	jmp	0x80	; 0x80 <__ctors_end>
+       4:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+       8:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+       c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      10:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      14:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      24:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      34:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      38:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      3c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      40:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      44:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      48:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      4c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      50:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      54:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      58:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      5c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      60:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      68:	84 04       	cpc	r8, r4
+      6a:	72 05       	cpc	r23, r2
+      6c:	a9 05       	cpc	r26, r9
+      6e:	50 06       	cpc	r5, r16
+      70:	a6 07       	cpc	r26, r22
+      72:	44 08       	sbc	r4, r4
+      74:	1e 0a       	sbc	r1, r30
+      76:	73 09       	sbc	r23, r3
+      78:	8f 09       	sbc	r24, r15
+      7a:	bb 09       	sbc	r27, r11
+      7c:	d7 09       	sbc	r29, r7
+      7e:	03 0a       	sbc	r0, r19
+
+00000080 <__ctors_end>:
+      80:	11 24       	eor	r1, r1
+      82:	1f be       	out	0x3f, r1	; 63
+      84:	cf ef       	ldi	r28, 0xFF	; 255
+      86:	d8 e0       	ldi	r29, 0x08	; 8
+      88:	de bf       	out	0x3e, r29	; 62
+      8a:	cd bf       	out	0x3d, r28	; 61
+
+0000008c <__do_copy_data>:
+      8c:	11 e0       	ldi	r17, 0x01	; 1
+      8e:	a0 e0       	ldi	r26, 0x00	; 0
+      90:	b1 e0       	ldi	r27, 0x01	; 1
+      92:	e8 ed       	ldi	r30, 0xD8	; 216
+      94:	f6 e1       	ldi	r31, 0x16	; 22
+      96:	02 c0       	rjmp	.+4      	; 0x9c <__do_copy_data+0x10>
+      98:	05 90       	lpm	r0, Z+
+      9a:	0d 92       	st	X+, r0
+      9c:	a2 38       	cpi	r26, 0x82	; 130
+      9e:	b1 07       	cpc	r27, r17
+      a0:	d9 f7       	brne	.-10     	; 0x98 <__do_copy_data+0xc>
+
+000000a2 <__do_clear_bss>:
+      a2:	23 e0       	ldi	r18, 0x03	; 3
+      a4:	a2 e8       	ldi	r26, 0x82	; 130
+      a6:	b1 e0       	ldi	r27, 0x01	; 1
+      a8:	01 c0       	rjmp	.+2      	; 0xac <.do_clear_bss_start>
+
+000000aa <.do_clear_bss_loop>:
+      aa:	1d 92       	st	X+, r1
+
+000000ac <.do_clear_bss_start>:
+      ac:	a8 38       	cpi	r26, 0x88	; 136
+      ae:	b2 07       	cpc	r27, r18
+      b0:	e1 f7       	brne	.-8      	; 0xaa <.do_clear_bss_loop>
+      b2:	0e 94 3d 04 	call	0x87a	; 0x87a <main>
+      b6:	0c 94 6a 0b 	jmp	0x16d4	; 0x16d4 <_exit>
+
+000000ba <__bad_interrupt>:
+      ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000be <ws2812_setleds>:
+   ws2812_setleds_pin(ledarray,leds, _BV(ws2812_pin));
+}
+
+void inline ws2812_setleds_pin(struct cRGB *ledarray, uint16_t leds, uint8_t pinmask)
+{
+  ws2812_DDRREG |= pinmask; // Enable DDR
+      be:	22 9a       	sbi	0x04, 2	; 4
+  ws2812_sendarray_mask((uint8_t*)ledarray,leds+leds+leds,pinmask);
+      c0:	9b 01       	movw	r18, r22
+      c2:	22 0f       	add	r18, r18
+      c4:	33 1f       	adc	r19, r19
+      c6:	62 0f       	add	r22, r18
+      c8:	73 1f       	adc	r23, r19
+void inline ws2812_sendarray_mask(uint8_t *data,uint16_t datlen,uint8_t maskhi)
+{
+  uint8_t curbyte,ctr,masklo;
+  uint8_t sreg_prev;
+  
+  masklo	=~maskhi&ws2812_PORTREG;
+      ca:	35 b1       	in	r19, 0x05	; 5
+      cc:	3b 7f       	andi	r19, 0xFB	; 251
+  maskhi |=        ws2812_PORTREG;
+      ce:	45 b1       	in	r20, 0x05	; 5
+      d0:	44 60       	ori	r20, 0x04	; 4
+  sreg_prev=SREG;
+      d2:	af b7       	in	r26, 0x3f	; 63
+  cli();  
+      d4:	f8 94       	cli
+
+  while (datlen--) {
+      d6:	61 15       	cp	r22, r1
+      d8:	71 05       	cpc	r23, r1
+      da:	89 f0       	breq	.+34     	; 0xfe <loop56+0x18>
+      dc:	fc 01       	movw	r30, r24
+      de:	86 0f       	add	r24, r22
+      e0:	97 1f       	adc	r25, r23
+    curbyte=*data++;
+      e2:	21 91       	ld	r18, Z+
+    
+    asm volatile(
+      e4:	58 e0       	ldi	r21, 0x08	; 8
+
+000000e6 <loop56>:
+      e6:	45 b9       	out	0x05, r20	; 5
+      e8:	27 ff       	sbrs	r18, 7
+      ea:	35 b9       	out	0x05, r19	; 5
+      ec:	22 0f       	add	r18, r18
+      ee:	00 00       	nop
+      f0:	00 c0       	rjmp	.+0      	; 0xf2 <loop56+0xc>
+      f2:	35 b9       	out	0x05, r19	; 5
+      f4:	5a 95       	dec	r21
+      f6:	b9 f7       	brne	.-18     	; 0xe6 <loop56>
+  masklo	=~maskhi&ws2812_PORTREG;
+  maskhi |=        ws2812_PORTREG;
+  sreg_prev=SREG;
+  cli();  
+
+  while (datlen--) {
+      f8:	e8 17       	cp	r30, r24
+      fa:	f9 07       	cpc	r31, r25
+      fc:	91 f7       	brne	.-28     	; 0xe2 <ws2812_setleds+0x24>
+    :	"=&d" (ctr)
+    :	"r" (curbyte), "I" (_SFR_IO_ADDR(ws2812_PORTREG)), "r" (maskhi), "r" (masklo)
+    );
+  }
+  
+  SREG=sreg_prev;
+      fe:	af bf       	out	0x3f, r26	; 63
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     100:	85 e8       	ldi	r24, 0x85	; 133
+     102:	8a 95       	dec	r24
+     104:	f1 f7       	brne	.-4      	; 0x102 <loop56+0x1c>
+     106:	00 00       	nop
+     108:	08 95       	ret
+
+0000010a <XY>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     10a:	60 ff       	sbrs	r22, 0
+     10c:	0a c0       	rjmp	.+20     	; 0x122 <XY+0x18>
+     10e:	96 e0       	ldi	r25, 0x06	; 6
+     110:	98 1b       	sub	r25, r24
+     112:	89 2f       	mov	r24, r25
+     114:	90 e0       	ldi	r25, 0x00	; 0
+     116:	27 e0       	ldi	r18, 0x07	; 7
+     118:	62 9f       	mul	r22, r18
+     11a:	80 0d       	add	r24, r0
+     11c:	91 1d       	adc	r25, r1
+     11e:	11 24       	eor	r1, r1
+     120:	08 95       	ret
+     122:	90 e0       	ldi	r25, 0x00	; 0
+     124:	27 e0       	ldi	r18, 0x07	; 7
+     126:	62 9f       	mul	r22, r18
+     128:	80 0d       	add	r24, r0
+     12a:	91 1d       	adc	r25, r1
+     12c:	11 24       	eor	r1, r1
+     12e:	08 95       	ret
+
+00000130 <setColor>:
+     130:	1f 93       	push	r17
+     132:	cf 93       	push	r28
+     134:	df 93       	push	r29
+     136:	c2 2f       	mov	r28, r18
+     138:	d3 2f       	mov	r29, r19
+     13a:	14 2f       	mov	r17, r20
+     13c:	0e 94 85 00 	call	0x10a	; 0x10a <XY>
+     140:	fc 01       	movw	r30, r24
+     142:	ee 0f       	add	r30, r30
+     144:	ff 1f       	adc	r31, r31
+     146:	8e 0f       	add	r24, r30
+     148:	9f 1f       	adc	r25, r31
+     14a:	fc 01       	movw	r30, r24
+     14c:	e5 5a       	subi	r30, 0xA5	; 165
+     14e:	fd 4f       	sbci	r31, 0xFD	; 253
+     150:	10 83       	st	Z, r17
+     152:	d1 83       	std	Z+1, r29	; 0x01
+     154:	c2 83       	std	Z+2, r28	; 0x02
+     156:	df 91       	pop	r29
+     158:	cf 91       	pop	r28
+     15a:	1f 91       	pop	r17
+     15c:	08 95       	ret
+
+0000015e <setTempColor>:
+     15e:	1f 93       	push	r17
+     160:	cf 93       	push	r28
+     162:	df 93       	push	r29
+     164:	c2 2f       	mov	r28, r18
+     166:	d3 2f       	mov	r29, r19
+     168:	14 2f       	mov	r17, r20
+     16a:	0e 94 85 00 	call	0x10a	; 0x10a <XY>
+     16e:	fc 01       	movw	r30, r24
+     170:	ee 0f       	add	r30, r30
+     172:	ff 1f       	adc	r31, r31
+     174:	8e 0f       	add	r24, r30
+     176:	9f 1f       	adc	r25, r31
+     178:	fc 01       	movw	r30, r24
+     17a:	e0 51       	subi	r30, 0x10	; 16
+     17c:	fd 4f       	sbci	r31, 0xFD	; 253
+     17e:	10 83       	st	Z, r17
+     180:	d1 83       	std	Z+1, r29	; 0x01
+     182:	c2 83       	std	Z+2, r28	; 0x02
+     184:	df 91       	pop	r29
+     186:	cf 91       	pop	r28
+     188:	1f 91       	pop	r17
+     18a:	08 95       	ret
+
+0000018c <checkAllSquares>:
+     18c:	af 92       	push	r10
+     18e:	bf 92       	push	r11
+     190:	df 92       	push	r13
+     192:	ef 92       	push	r14
+     194:	ff 92       	push	r15
+     196:	0f 93       	push	r16
+     198:	1f 93       	push	r17
+     19a:	cf 93       	push	r28
+     19c:	df 93       	push	r29
+     19e:	10 92 89 01 	sts	0x0189, r1
+     1a2:	10 92 ef 02 	sts	0x02EF, r1
+     1a6:	10 92 ee 02 	sts	0x02EE, r1
+     1aa:	80 e0       	ldi	r24, 0x00	; 0
+     1ac:	90 e0       	ldi	r25, 0x00	; 0
+     1ae:	61 e0       	ldi	r22, 0x01	; 1
+     1b0:	70 e0       	ldi	r23, 0x00	; 0
+     1b2:	ff 24       	eor	r15, r15
+     1b4:	f3 94       	inc	r15
+     1b6:	c3 e8       	ldi	r28, 0x83	; 131
+     1b8:	d3 e0       	ldi	r29, 0x03	; 3
+     1ba:	a4 e8       	ldi	r26, 0x84	; 132
+     1bc:	b3 e0       	ldi	r27, 0x03	; 3
+     1be:	1f 2d       	mov	r17, r15
+     1c0:	e1 2c       	mov	r14, r1
+     1c2:	fc 01       	movw	r30, r24
+     1c4:	ee 0f       	add	r30, r30
+     1c6:	ff 1f       	adc	r31, r31
+     1c8:	ec 58       	subi	r30, 0x8C	; 140
+     1ca:	fe 4f       	sbci	r31, 0xFE	; 254
+     1cc:	90 81       	ld	r25, Z
+     1ce:	e9 2f       	mov	r30, r25
+     1d0:	e6 95       	lsr	r30
+     1d2:	e6 95       	lsr	r30
+     1d4:	e6 95       	lsr	r30
+     1d6:	f0 e0       	ldi	r31, 0x00	; 0
+     1d8:	9f 01       	movw	r18, r30
+     1da:	22 0f       	add	r18, r18
+     1dc:	33 1f       	adc	r19, r19
+     1de:	e2 0f       	add	r30, r18
+     1e0:	f3 1f       	adc	r31, r19
+     1e2:	b0 96       	adiw	r30, 0x20	; 32
+     1e4:	21 81       	ldd	r18, Z+1	; 0x01
+     1e6:	97 70       	andi	r25, 0x07	; 7
+     1e8:	5b 01       	movw	r10, r22
+     1ea:	02 c0       	rjmp	.+4      	; 0x1f0 <checkAllSquares+0x64>
+     1ec:	aa 0c       	add	r10, r10
+     1ee:	bb 1c       	adc	r11, r11
+     1f0:	9a 95       	dec	r25
+     1f2:	e2 f7       	brpl	.-8      	; 0x1ec <checkAllSquares+0x60>
+     1f4:	c5 01       	movw	r24, r10
+     1f6:	82 2b       	or	r24, r18
+     1f8:	81 83       	std	Z+1, r24	; 0x01
+     1fa:	e0 91 ee 02 	lds	r30, 0x02EE
+     1fe:	f0 91 ef 02 	lds	r31, 0x02EF
+     202:	ee 0f       	add	r30, r30
+     204:	ff 1f       	adc	r31, r31
+     206:	ec 58       	subi	r30, 0x8C	; 140
+     208:	fe 4f       	sbci	r31, 0xFE	; 254
+     20a:	90 81       	ld	r25, Z
+     20c:	e9 2f       	mov	r30, r25
+     20e:	e6 95       	lsr	r30
+     210:	e6 95       	lsr	r30
+     212:	e6 95       	lsr	r30
+     214:	f0 e0       	ldi	r31, 0x00	; 0
+     216:	9f 01       	movw	r18, r30
+     218:	22 0f       	add	r18, r18
+     21a:	33 1f       	adc	r19, r19
+     21c:	e2 0f       	add	r30, r18
+     21e:	f3 1f       	adc	r31, r19
+     220:	b0 96       	adiw	r30, 0x20	; 32
+     222:	22 81       	ldd	r18, Z+2	; 0x02
+     224:	97 70       	andi	r25, 0x07	; 7
+     226:	ab 01       	movw	r20, r22
+     228:	02 c0       	rjmp	.+4      	; 0x22e <checkAllSquares+0xa2>
+     22a:	44 0f       	add	r20, r20
+     22c:	55 1f       	adc	r21, r21
+     22e:	9a 95       	dec	r25
+     230:	e2 f7       	brpl	.-8      	; 0x22a <checkAllSquares+0x9e>
+     232:	ca 01       	movw	r24, r20
+     234:	82 2b       	or	r24, r18
+     236:	82 83       	std	Z+2, r24	; 0x02
+     238:	8f e9       	ldi	r24, 0x9F	; 159
+     23a:	9f e0       	ldi	r25, 0x0F	; 15
+     23c:	01 97       	sbiw	r24, 0x01	; 1
+     23e:	f1 f7       	brne	.-4      	; 0x23c <checkAllSquares+0xb0>
+     240:	00 c0       	rjmp	.+0      	; 0x242 <checkAllSquares+0xb6>
+     242:	00 00       	nop
+     244:	10 92 8b 01 	sts	0x018B, r1
+     248:	10 92 8a 01 	sts	0x018A, r1
+     24c:	40 91 ee 02 	lds	r20, 0x02EE
+     250:	50 91 ef 02 	lds	r21, 0x02EF
+     254:	d4 2e       	mov	r13, r20
+     256:	80 e0       	ldi	r24, 0x00	; 0
+     258:	90 e0       	ldi	r25, 0x00	; 0
+     25a:	9a 01       	movw	r18, r20
+     25c:	22 0f       	add	r18, r18
+     25e:	33 1f       	adc	r19, r19
+     260:	22 0f       	add	r18, r18
+     262:	33 1f       	adc	r19, r19
+     264:	22 0f       	add	r18, r18
+     266:	33 1f       	adc	r19, r19
+     268:	24 1b       	sub	r18, r20
+     26a:	35 0b       	sbc	r19, r21
+     26c:	fc 01       	movw	r30, r24
+     26e:	ee 0f       	add	r30, r30
+     270:	ff 1f       	adc	r31, r31
+     272:	ea 59       	subi	r30, 0x9A	; 154
+     274:	fe 4f       	sbci	r31, 0xFE	; 254
+     276:	00 81       	ld	r16, Z
+     278:	40 2f       	mov	r20, r16
+     27a:	46 95       	lsr	r20
+     27c:	46 95       	lsr	r20
+     27e:	46 95       	lsr	r20
+     280:	50 e0       	ldi	r21, 0x00	; 0
+     282:	fa 01       	movw	r30, r20
+     284:	ee 0f       	add	r30, r30
+     286:	ff 1f       	adc	r31, r31
+     288:	e4 0f       	add	r30, r20
+     28a:	f5 1f       	adc	r31, r21
+     28c:	e0 a1       	ldd	r30, Z+32	; 0x20
+     28e:	40 2f       	mov	r20, r16
+     290:	47 70       	andi	r20, 0x07	; 7
+     292:	5b 01       	movw	r10, r22
+     294:	02 c0       	rjmp	.+4      	; 0x29a <checkAllSquares+0x10e>
+     296:	aa 0c       	add	r10, r10
+     298:	bb 1c       	adc	r11, r11
+     29a:	4a 95       	dec	r20
+     29c:	e2 f7       	brpl	.-8      	; 0x296 <checkAllSquares+0x10a>
+     29e:	a5 01       	movw	r20, r10
+     2a0:	4e 23       	and	r20, r30
+     2a2:	51 2f       	mov	r21, r17
+     2a4:	09 f4       	brne	.+2      	; 0x2a8 <checkAllSquares+0x11c>
+     2a6:	5e 2d       	mov	r21, r14
+     2a8:	50 93 90 01 	sts	0x0190, r21
+     2ac:	f9 01       	movw	r30, r18
+     2ae:	e8 0f       	add	r30, r24
+     2b0:	f9 1f       	adc	r31, r25
+     2b2:	ee 0f       	add	r30, r30
+     2b4:	ff 1f       	adc	r31, r31
+     2b6:	ee 0f       	add	r30, r30
+     2b8:	ff 1f       	adc	r31, r31
+     2ba:	ee 56       	subi	r30, 0x6E	; 110
+     2bc:	fe 4f       	sbci	r31, 0xFE	; 254
+     2be:	40 81       	ld	r20, Z
+     2c0:	45 17       	cp	r20, r21
+     2c2:	79 f0       	breq	.+30     	; 0x2e2 <checkAllSquares+0x156>
+     2c4:	f9 01       	movw	r30, r18
+     2c6:	e8 0f       	add	r30, r24
+     2c8:	f9 1f       	adc	r31, r25
+     2ca:	ee 0f       	add	r30, r30
+     2cc:	ff 1f       	adc	r31, r31
+     2ce:	ee 0f       	add	r30, r30
+     2d0:	ff 1f       	adc	r31, r31
+     2d2:	ee 56       	subi	r30, 0x6E	; 110
+     2d4:	fe 4f       	sbci	r31, 0xFE	; 254
+     2d6:	f1 82       	std	Z+1, r15	; 0x01
+     2d8:	10 93 89 01 	sts	0x0189, r17
+     2dc:	d8 82       	st	Y, r13
+     2de:	8c 93       	st	X, r24
+     2e0:	0a c0       	rjmp	.+20     	; 0x2f6 <checkAllSquares+0x16a>
+     2e2:	82 0f       	add	r24, r18
+     2e4:	93 1f       	adc	r25, r19
+     2e6:	fc 01       	movw	r30, r24
+     2e8:	ee 0f       	add	r30, r30
+     2ea:	ff 1f       	adc	r31, r31
+     2ec:	ee 0f       	add	r30, r30
+     2ee:	ff 1f       	adc	r31, r31
+     2f0:	ee 56       	subi	r30, 0x6E	; 110
+     2f2:	fe 4f       	sbci	r31, 0xFE	; 254
+     2f4:	11 82       	std	Z+1, r1	; 0x01
+     2f6:	80 91 8a 01 	lds	r24, 0x018A
+     2fa:	90 91 8b 01 	lds	r25, 0x018B
+     2fe:	f9 01       	movw	r30, r18
+     300:	e8 0f       	add	r30, r24
+     302:	f9 1f       	adc	r31, r25
+     304:	ee 0f       	add	r30, r30
+     306:	ff 1f       	adc	r31, r31
+     308:	ee 0f       	add	r30, r30
+     30a:	ff 1f       	adc	r31, r31
+     30c:	ee 56       	subi	r30, 0x6E	; 110
+     30e:	fe 4f       	sbci	r31, 0xFE	; 254
+     310:	40 91 90 01 	lds	r20, 0x0190
+     314:	40 83       	st	Z, r20
+     316:	01 96       	adiw	r24, 0x01	; 1
+     318:	90 93 8b 01 	sts	0x018B, r25
+     31c:	80 93 8a 01 	sts	0x018A, r24
+     320:	87 30       	cpi	r24, 0x07	; 7
+     322:	91 05       	cpc	r25, r1
+     324:	0c f4       	brge	.+2      	; 0x328 <checkAllSquares+0x19c>
+     326:	a2 cf       	rjmp	.-188    	; 0x26c <checkAllSquares+0xe0>
+     328:	e0 91 ee 02 	lds	r30, 0x02EE
+     32c:	f0 91 ef 02 	lds	r31, 0x02EF
+     330:	ee 0f       	add	r30, r30
+     332:	ff 1f       	adc	r31, r31
+     334:	ec 58       	subi	r30, 0x8C	; 140
+     336:	fe 4f       	sbci	r31, 0xFE	; 254
+     338:	80 81       	ld	r24, Z
+     33a:	e8 2f       	mov	r30, r24
+     33c:	e6 95       	lsr	r30
+     33e:	e6 95       	lsr	r30
+     340:	e6 95       	lsr	r30
+     342:	f0 e0       	ldi	r31, 0x00	; 0
+     344:	9f 01       	movw	r18, r30
+     346:	22 0f       	add	r18, r18
+     348:	33 1f       	adc	r19, r19
+     34a:	e2 0f       	add	r30, r18
+     34c:	f3 1f       	adc	r31, r19
+     34e:	b0 96       	adiw	r30, 0x20	; 32
+     350:	22 81       	ldd	r18, Z+2	; 0x02
+     352:	87 70       	andi	r24, 0x07	; 7
+     354:	ab 01       	movw	r20, r22
+     356:	02 c0       	rjmp	.+4      	; 0x35c <checkAllSquares+0x1d0>
+     358:	44 0f       	add	r20, r20
+     35a:	55 1f       	adc	r21, r21
+     35c:	8a 95       	dec	r24
+     35e:	e2 f7       	brpl	.-8      	; 0x358 <checkAllSquares+0x1cc>
+     360:	ca 01       	movw	r24, r20
+     362:	80 95       	com	r24
+     364:	82 23       	and	r24, r18
+     366:	82 83       	std	Z+2, r24	; 0x02
+     368:	8f e9       	ldi	r24, 0x9F	; 159
+     36a:	9f e0       	ldi	r25, 0x0F	; 15
+     36c:	01 97       	sbiw	r24, 0x01	; 1
+     36e:	f1 f7       	brne	.-4      	; 0x36c <checkAllSquares+0x1e0>
+     370:	00 c0       	rjmp	.+0      	; 0x372 <checkAllSquares+0x1e6>
+     372:	00 00       	nop
+     374:	e0 91 ee 02 	lds	r30, 0x02EE
+     378:	f0 91 ef 02 	lds	r31, 0x02EF
+     37c:	ee 0f       	add	r30, r30
+     37e:	ff 1f       	adc	r31, r31
+     380:	ec 58       	subi	r30, 0x8C	; 140
+     382:	fe 4f       	sbci	r31, 0xFE	; 254
+     384:	80 81       	ld	r24, Z
+     386:	e8 2f       	mov	r30, r24
+     388:	e6 95       	lsr	r30
+     38a:	e6 95       	lsr	r30
+     38c:	e6 95       	lsr	r30
+     38e:	f0 e0       	ldi	r31, 0x00	; 0
+     390:	9f 01       	movw	r18, r30
+     392:	22 0f       	add	r18, r18
+     394:	33 1f       	adc	r19, r19
+     396:	e2 0f       	add	r30, r18
+     398:	f3 1f       	adc	r31, r19
+     39a:	b0 96       	adiw	r30, 0x20	; 32
+     39c:	21 81       	ldd	r18, Z+1	; 0x01
+     39e:	87 70       	andi	r24, 0x07	; 7
+     3a0:	5b 01       	movw	r10, r22
+     3a2:	02 c0       	rjmp	.+4      	; 0x3a8 <checkAllSquares+0x21c>
+     3a4:	aa 0c       	add	r10, r10
+     3a6:	bb 1c       	adc	r11, r11
+     3a8:	8a 95       	dec	r24
+     3aa:	e2 f7       	brpl	.-8      	; 0x3a4 <checkAllSquares+0x218>
+     3ac:	c5 01       	movw	r24, r10
+     3ae:	80 95       	com	r24
+     3b0:	82 23       	and	r24, r18
+     3b2:	81 83       	std	Z+1, r24	; 0x01
+     3b4:	8f e9       	ldi	r24, 0x9F	; 159
+     3b6:	9f e0       	ldi	r25, 0x0F	; 15
+     3b8:	01 97       	sbiw	r24, 0x01	; 1
+     3ba:	f1 f7       	brne	.-4      	; 0x3b8 <checkAllSquares+0x22c>
+     3bc:	00 c0       	rjmp	.+0      	; 0x3be <checkAllSquares+0x232>
+     3be:	00 00       	nop
+     3c0:	80 91 ee 02 	lds	r24, 0x02EE
+     3c4:	90 91 ef 02 	lds	r25, 0x02EF
+     3c8:	01 96       	adiw	r24, 0x01	; 1
+     3ca:	90 93 ef 02 	sts	0x02EF, r25
+     3ce:	80 93 ee 02 	sts	0x02EE, r24
+     3d2:	87 30       	cpi	r24, 0x07	; 7
+     3d4:	91 05       	cpc	r25, r1
+     3d6:	0c f4       	brge	.+2      	; 0x3da <checkAllSquares+0x24e>
+     3d8:	f4 ce       	rjmp	.-536    	; 0x1c2 <checkAllSquares+0x36>
+     3da:	df 91       	pop	r29
+     3dc:	cf 91       	pop	r28
+     3de:	1f 91       	pop	r17
+     3e0:	0f 91       	pop	r16
+     3e2:	ff 90       	pop	r15
+     3e4:	ef 90       	pop	r14
+     3e6:	df 90       	pop	r13
+     3e8:	bf 90       	pop	r11
+     3ea:	af 90       	pop	r10
+     3ec:	08 95       	ret
+
+000003ee <winAnimation>:
+     3ee:	10 92 57 02 	sts	0x0257, r1
+     3f2:	10 92 56 02 	sts	0x0256, r1
+     3f6:	10 92 ef 02 	sts	0x02EF, r1
+     3fa:	10 92 ee 02 	sts	0x02EE, r1
+     3fe:	10 92 8b 01 	sts	0x018B, r1
+     402:	10 92 8a 01 	sts	0x018A, r1
+     406:	60 e0       	ldi	r22, 0x00	; 0
+     408:	70 e0       	ldi	r23, 0x00	; 0
+     40a:	80 91 ee 02 	lds	r24, 0x02EE
+     40e:	90 91 ef 02 	lds	r25, 0x02EF
+     412:	fc 01       	movw	r30, r24
+     414:	ee 0f       	add	r30, r30
+     416:	ff 1f       	adc	r31, r31
+     418:	ee 0f       	add	r30, r30
+     41a:	ff 1f       	adc	r31, r31
+     41c:	ee 0f       	add	r30, r30
+     41e:	ff 1f       	adc	r31, r31
+     420:	e8 1b       	sub	r30, r24
+     422:	f9 0b       	sbc	r31, r25
+     424:	e6 0f       	add	r30, r22
+     426:	f7 1f       	adc	r31, r23
+     428:	ee 0f       	add	r30, r30
+     42a:	ff 1f       	adc	r31, r31
+     42c:	ee 0f       	add	r30, r30
+     42e:	ff 1f       	adc	r31, r31
+     430:	ee 56       	subi	r30, 0x6E	; 110
+     432:	fe 4f       	sbci	r31, 0xFE	; 254
+     434:	20 81       	ld	r18, Z
+     436:	22 23       	and	r18, r18
+     438:	71 f0       	breq	.+28     	; 0x456 <winAnimation+0x68>
+     43a:	20 91 56 02 	lds	r18, 0x0256
+     43e:	30 91 57 02 	lds	r19, 0x0257
+     442:	21 70       	andi	r18, 0x01	; 1
+     444:	33 27       	eor	r19, r19
+     446:	31 95       	neg	r19
+     448:	21 95       	neg	r18
+     44a:	31 09       	sbc	r19, r1
+     44c:	40 e0       	ldi	r20, 0x00	; 0
+     44e:	50 e0       	ldi	r21, 0x00	; 0
+     450:	0e 94 af 00 	call	0x15e	; 0x15e <setTempColor>
+     454:	05 c0       	rjmp	.+10     	; 0x460 <winAnimation+0x72>
+     456:	20 e0       	ldi	r18, 0x00	; 0
+     458:	30 e0       	ldi	r19, 0x00	; 0
+     45a:	a9 01       	movw	r20, r18
+     45c:	0e 94 af 00 	call	0x15e	; 0x15e <setTempColor>
+     460:	60 91 8a 01 	lds	r22, 0x018A
+     464:	70 91 8b 01 	lds	r23, 0x018B
+     468:	6f 5f       	subi	r22, 0xFF	; 255
+     46a:	7f 4f       	sbci	r23, 0xFF	; 255
+     46c:	70 93 8b 01 	sts	0x018B, r23
+     470:	60 93 8a 01 	sts	0x018A, r22
+     474:	67 30       	cpi	r22, 0x07	; 7
+     476:	71 05       	cpc	r23, r1
+     478:	44 f2       	brlt	.-112    	; 0x40a <winAnimation+0x1c>
+     47a:	80 91 ee 02 	lds	r24, 0x02EE
+     47e:	90 91 ef 02 	lds	r25, 0x02EF
+     482:	01 96       	adiw	r24, 0x01	; 1
+     484:	90 93 ef 02 	sts	0x02EF, r25
+     488:	80 93 ee 02 	sts	0x02EE, r24
+     48c:	07 97       	sbiw	r24, 0x07	; 7
+     48e:	0c f4       	brge	.+2      	; 0x492 <winAnimation+0xa4>
+     490:	b6 cf       	rjmp	.-148    	; 0x3fe <winAnimation+0x10>
+     492:	2f e7       	ldi	r18, 0x7F	; 127
+     494:	8a e1       	ldi	r24, 0x1A	; 26
+     496:	96 e0       	ldi	r25, 0x06	; 6
+     498:	21 50       	subi	r18, 0x01	; 1
+     49a:	80 40       	sbci	r24, 0x00	; 0
+     49c:	90 40       	sbci	r25, 0x00	; 0
+     49e:	e1 f7       	brne	.-8      	; 0x498 <winAnimation+0xaa>
+     4a0:	00 c0       	rjmp	.+0      	; 0x4a2 <winAnimation+0xb4>
+     4a2:	00 00       	nop
+     4a4:	61 e3       	ldi	r22, 0x31	; 49
+     4a6:	70 e0       	ldi	r23, 0x00	; 0
+     4a8:	80 ef       	ldi	r24, 0xF0	; 240
+     4aa:	92 e0       	ldi	r25, 0x02	; 2
+     4ac:	0e 94 5f 00 	call	0xbe	; 0xbe <ws2812_setleds>
+     4b0:	80 91 56 02 	lds	r24, 0x0256
+     4b4:	90 91 57 02 	lds	r25, 0x0257
+     4b8:	01 96       	adiw	r24, 0x01	; 1
+     4ba:	90 93 57 02 	sts	0x0257, r25
+     4be:	80 93 56 02 	sts	0x0256, r24
+     4c2:	0a 97       	sbiw	r24, 0x0a	; 10
+     4c4:	0c f4       	brge	.+2      	; 0x4c8 <winAnimation+0xda>
+     4c6:	97 cf       	rjmp	.-210    	; 0x3f6 <winAnimation+0x8>
+     4c8:	08 95       	ret
+
+000004ca <switchPlayerAnimation>:
+     4ca:	0f 93       	push	r16
+     4cc:	1f 93       	push	r17
+     4ce:	cf 93       	push	r28
+     4d0:	df 93       	push	r29
+     4d2:	10 92 ef 02 	sts	0x02EF, r1
+     4d6:	10 92 ee 02 	sts	0x02EE, r1
+     4da:	00 e0       	ldi	r16, 0x00	; 0
+     4dc:	ce ee       	ldi	r28, 0xEE	; 238
+     4de:	d2 e0       	ldi	r29, 0x02	; 2
+     4e0:	16 e0       	ldi	r17, 0x06	; 6
+     4e2:	10 92 8b 01 	sts	0x018B, r1
+     4e6:	10 92 8a 01 	sts	0x018A, r1
+     4ea:	60 2f       	mov	r22, r16
+     4ec:	80 91 5a 02 	lds	r24, 0x025A
+     4f0:	88 23       	and	r24, r24
+     4f2:	11 f0       	breq	.+4      	; 0x4f8 <switchPlayerAnimation+0x2e>
+     4f4:	88 81       	ld	r24, Y
+     4f6:	04 c0       	rjmp	.+8      	; 0x500 <switchPlayerAnimation+0x36>
+     4f8:	88 81       	ld	r24, Y
+     4fa:	21 2f       	mov	r18, r17
+     4fc:	28 1b       	sub	r18, r24
+     4fe:	82 2f       	mov	r24, r18
+     500:	20 e0       	ldi	r18, 0x00	; 0
+     502:	30 e0       	ldi	r19, 0x00	; 0
+     504:	40 ea       	ldi	r20, 0xA0	; 160
+     506:	50 e0       	ldi	r21, 0x00	; 0
+     508:	0e 94 af 00 	call	0x15e	; 0x15e <setTempColor>
+     50c:	60 91 8a 01 	lds	r22, 0x018A
+     510:	70 91 8b 01 	lds	r23, 0x018B
+     514:	6f 5f       	subi	r22, 0xFF	; 255
+     516:	7f 4f       	sbci	r23, 0xFF	; 255
+     518:	70 93 8b 01 	sts	0x018B, r23
+     51c:	60 93 8a 01 	sts	0x018A, r22
+     520:	67 30       	cpi	r22, 0x07	; 7
+     522:	71 05       	cpc	r23, r1
+     524:	1c f3       	brlt	.-58     	; 0x4ec <switchPlayerAnimation+0x22>
+     526:	61 e3       	ldi	r22, 0x31	; 49
+     528:	70 e0       	ldi	r23, 0x00	; 0
+     52a:	80 ef       	ldi	r24, 0xF0	; 240
+     52c:	92 e0       	ldi	r25, 0x02	; 2
+     52e:	0e 94 5f 00 	call	0xbe	; 0xbe <ws2812_setleds>
+     532:	8f eb       	ldi	r24, 0xBF	; 191
+     534:	94 ed       	ldi	r25, 0xD4	; 212
+     536:	21 e0       	ldi	r18, 0x01	; 1
+     538:	81 50       	subi	r24, 0x01	; 1
+     53a:	90 40       	sbci	r25, 0x00	; 0
+     53c:	20 40       	sbci	r18, 0x00	; 0
+     53e:	e1 f7       	brne	.-8      	; 0x538 <switchPlayerAnimation+0x6e>
+     540:	00 c0       	rjmp	.+0      	; 0x542 <switchPlayerAnimation+0x78>
+     542:	00 00       	nop
+     544:	10 92 8b 01 	sts	0x018B, r1
+     548:	10 92 8a 01 	sts	0x018A, r1
+     54c:	60 2f       	mov	r22, r16
+     54e:	80 91 5a 02 	lds	r24, 0x025A
+     552:	88 23       	and	r24, r24
+     554:	11 f0       	breq	.+4      	; 0x55a <switchPlayerAnimation+0x90>
+     556:	88 81       	ld	r24, Y
+     558:	04 c0       	rjmp	.+8      	; 0x562 <switchPlayerAnimation+0x98>
+     55a:	88 81       	ld	r24, Y
+     55c:	91 2f       	mov	r25, r17
+     55e:	98 1b       	sub	r25, r24
+     560:	89 2f       	mov	r24, r25
+     562:	20 e0       	ldi	r18, 0x00	; 0
+     564:	30 e0       	ldi	r19, 0x00	; 0
+     566:	a9 01       	movw	r20, r18
+     568:	0e 94 af 00 	call	0x15e	; 0x15e <setTempColor>
+     56c:	60 91 8a 01 	lds	r22, 0x018A
+     570:	70 91 8b 01 	lds	r23, 0x018B
+     574:	6f 5f       	subi	r22, 0xFF	; 255
+     576:	7f 4f       	sbci	r23, 0xFF	; 255
+     578:	70 93 8b 01 	sts	0x018B, r23
+     57c:	60 93 8a 01 	sts	0x018A, r22
+     580:	67 30       	cpi	r22, 0x07	; 7
+     582:	71 05       	cpc	r23, r1
+     584:	24 f3       	brlt	.-56     	; 0x54e <switchPlayerAnimation+0x84>
+     586:	80 91 ee 02 	lds	r24, 0x02EE
+     58a:	90 91 ef 02 	lds	r25, 0x02EF
+     58e:	01 96       	adiw	r24, 0x01	; 1
+     590:	90 93 ef 02 	sts	0x02EF, r25
+     594:	80 93 ee 02 	sts	0x02EE, r24
+     598:	07 97       	sbiw	r24, 0x07	; 7
+     59a:	0c f4       	brge	.+2      	; 0x59e <switchPlayerAnimation+0xd4>
+     59c:	a2 cf       	rjmp	.-188    	; 0x4e2 <switchPlayerAnimation+0x18>
+     59e:	90 91 5a 02 	lds	r25, 0x025A
+     5a2:	81 e0       	ldi	r24, 0x01	; 1
+     5a4:	89 27       	eor	r24, r25
+     5a6:	80 93 5a 02 	sts	0x025A, r24
+     5aa:	df 91       	pop	r29
+     5ac:	cf 91       	pop	r28
+     5ae:	1f 91       	pop	r17
+     5b0:	0f 91       	pop	r16
+     5b2:	08 95       	ret
+
+000005b4 <isAligned>:
+     5b4:	3f 92       	push	r3
+     5b6:	4f 92       	push	r4
+     5b8:	5f 92       	push	r5
+     5ba:	6f 92       	push	r6
+     5bc:	7f 92       	push	r7
+     5be:	8f 92       	push	r8
+     5c0:	9f 92       	push	r9
+     5c2:	af 92       	push	r10
+     5c4:	bf 92       	push	r11
+     5c6:	cf 92       	push	r12
+     5c8:	df 92       	push	r13
+     5ca:	ef 92       	push	r14
+     5cc:	ff 92       	push	r15
+     5ce:	0f 93       	push	r16
+     5d0:	1f 93       	push	r17
+     5d2:	cf 93       	push	r28
+     5d4:	df 93       	push	r29
+     5d6:	0f 2e       	mov	r0, r31
+     5d8:	f2 e9       	ldi	r31, 0x92	; 146
+     5da:	cf 2e       	mov	r12, r31
+     5dc:	f1 e0       	ldi	r31, 0x01	; 1
+     5de:	df 2e       	mov	r13, r31
+     5e0:	f0 2d       	mov	r31, r0
+     5e2:	a0 e0       	ldi	r26, 0x00	; 0
+     5e4:	b0 e0       	ldi	r27, 0x00	; 0
+     5e6:	c0 e0       	ldi	r28, 0x00	; 0
+     5e8:	d0 e0       	ldi	r29, 0x00	; 0
+     5ea:	60 e0       	ldi	r22, 0x00	; 0
+     5ec:	70 e0       	ldi	r23, 0x00	; 0
+     5ee:	40 e0       	ldi	r20, 0x00	; 0
+     5f0:	50 e0       	ldi	r21, 0x00	; 0
+     5f2:	90 e0       	ldi	r25, 0x00	; 0
+     5f4:	51 2c       	mov	r5, r1
+     5f6:	41 2c       	mov	r4, r1
+     5f8:	61 2c       	mov	r6, r1
+     5fa:	33 24       	eor	r3, r3
+     5fc:	33 94       	inc	r3
+     5fe:	68 94       	set
+     600:	77 24       	eor	r7, r7
+     602:	71 f8       	bld	r7, 1
+     604:	f6 01       	movw	r30, r12
+     606:	25 2d       	mov	r18, r5
+     608:	34 2d       	mov	r19, r4
+     60a:	8a 2e       	mov	r8, r26
+     60c:	9b 2e       	mov	r9, r27
+     60e:	80 81       	ld	r24, Z
+     610:	88 23       	and	r24, r24
+     612:	09 f4       	brne	.+2      	; 0x616 <isAligned+0x62>
+     614:	80 c0       	rjmp	.+256    	; 0x716 <isAligned+0x162>
+     616:	4f 5f       	subi	r20, 0xFF	; 255
+     618:	5f 4f       	sbci	r21, 0xFF	; 255
+     61a:	41 30       	cpi	r20, 0x01	; 1
+     61c:	51 05       	cpc	r21, r1
+     61e:	09 f4       	brne	.+2      	; 0x622 <isAligned+0x6e>
+     620:	6b c0       	rjmp	.+214    	; 0x6f8 <isAligned+0x144>
+     622:	42 30       	cpi	r20, 0x02	; 2
+     624:	51 05       	cpc	r21, r1
+     626:	49 f5       	brne	.+82     	; 0x67a <isAligned+0xc6>
+     628:	6a 17       	cp	r22, r26
+     62a:	7b 07       	cpc	r23, r27
+     62c:	09 f4       	brne	.+2      	; 0x630 <isAligned+0x7c>
+     62e:	8c c0       	rjmp	.+280    	; 0x748 <isAligned+0x194>
+     630:	c2 17       	cp	r28, r18
+     632:	d3 07       	cpc	r29, r19
+     634:	09 f4       	brne	.+2      	; 0x638 <isAligned+0x84>
+     636:	8a c0       	rjmp	.+276    	; 0x74c <isAligned+0x198>
+     638:	cb 01       	movw	r24, r22
+     63a:	8a 1b       	sub	r24, r26
+     63c:	9b 0b       	sbc	r25, r27
+     63e:	8c 01       	movw	r16, r24
+     640:	22 f4       	brpl	.+8      	; 0x64a <isAligned+0x96>
+     642:	00 27       	eor	r16, r16
+     644:	11 27       	eor	r17, r17
+     646:	08 1b       	sub	r16, r24
+     648:	19 0b       	sbc	r17, r25
+     64a:	7e 01       	movw	r14, r28
+     64c:	e2 1a       	sub	r14, r18
+     64e:	f3 0a       	sbc	r15, r19
+     650:	c7 01       	movw	r24, r14
+     652:	99 23       	and	r25, r25
+     654:	24 f4       	brge	.+8      	; 0x65e <isAligned+0xaa>
+     656:	88 27       	eor	r24, r24
+     658:	99 27       	eor	r25, r25
+     65a:	8e 19       	sub	r24, r14
+     65c:	9f 09       	sbc	r25, r15
+     65e:	08 17       	cp	r16, r24
+     660:	19 07       	cpc	r17, r25
+     662:	09 f4       	brne	.+2      	; 0x666 <isAligned+0xb2>
+     664:	75 c0       	rjmp	.+234    	; 0x750 <isAligned+0x19c>
+     666:	30 93 8b 01 	sts	0x018B, r19
+     66a:	20 93 8a 01 	sts	0x018A, r18
+     66e:	b0 93 ef 02 	sts	0x02EF, r27
+     672:	a0 93 ee 02 	sts	0x02EE, r26
+     676:	80 e0       	ldi	r24, 0x00	; 0
+     678:	6d c0       	rjmp	.+218    	; 0x754 <isAligned+0x1a0>
+     67a:	91 30       	cpi	r25, 0x01	; 1
+     67c:	21 f0       	breq	.+8      	; 0x686 <isAligned+0xd2>
+     67e:	80 f0       	brcs	.+32     	; 0x6a0 <isAligned+0xec>
+     680:	92 30       	cpi	r25, 0x02	; 2
+     682:	d9 f0       	breq	.+54     	; 0x6ba <isAligned+0x106>
+     684:	3c c0       	rjmp	.+120    	; 0x6fe <isAligned+0x14a>
+     686:	c2 17       	cp	r28, r18
+     688:	d3 07       	cpc	r29, r19
+     68a:	c9 f1       	breq	.+114    	; 0x6fe <isAligned+0x14a>
+     68c:	30 93 8b 01 	sts	0x018B, r19
+     690:	20 93 8a 01 	sts	0x018A, r18
+     694:	b0 93 ef 02 	sts	0x02EF, r27
+     698:	a0 93 ee 02 	sts	0x02EE, r26
+     69c:	80 e0       	ldi	r24, 0x00	; 0
+     69e:	5a c0       	rjmp	.+180    	; 0x754 <isAligned+0x1a0>
+     6a0:	6a 17       	cp	r22, r26
+     6a2:	7b 07       	cpc	r23, r27
+     6a4:	61 f1       	breq	.+88     	; 0x6fe <isAligned+0x14a>
+     6a6:	30 93 8b 01 	sts	0x018B, r19
+     6aa:	20 93 8a 01 	sts	0x018A, r18
+     6ae:	b0 93 ef 02 	sts	0x02EF, r27
+     6b2:	a0 93 ee 02 	sts	0x02EE, r26
+     6b6:	80 e0       	ldi	r24, 0x00	; 0
+     6b8:	4d c0       	rjmp	.+154    	; 0x754 <isAligned+0x1a0>
+     6ba:	8b 01       	movw	r16, r22
+     6bc:	0a 1b       	sub	r16, r26
+     6be:	1b 0b       	sbc	r17, r27
+     6c0:	78 01       	movw	r14, r16
+     6c2:	22 f4       	brpl	.+8      	; 0x6cc <isAligned+0x118>
+     6c4:	ee 24       	eor	r14, r14
+     6c6:	ff 24       	eor	r15, r15
+     6c8:	e0 1a       	sub	r14, r16
+     6ca:	f1 0a       	sbc	r15, r17
+     6cc:	5e 01       	movw	r10, r28
+     6ce:	a2 1a       	sub	r10, r18
+     6d0:	b3 0a       	sbc	r11, r19
+     6d2:	85 01       	movw	r16, r10
+     6d4:	22 f4       	brpl	.+8      	; 0x6de <isAligned+0x12a>
+     6d6:	00 27       	eor	r16, r16
+     6d8:	11 27       	eor	r17, r17
+     6da:	0a 19       	sub	r16, r10
+     6dc:	1b 09       	sbc	r17, r11
+     6de:	e0 16       	cp	r14, r16
+     6e0:	f1 06       	cpc	r15, r17
+     6e2:	69 f0       	breq	.+26     	; 0x6fe <isAligned+0x14a>
+     6e4:	30 93 8b 01 	sts	0x018B, r19
+     6e8:	20 93 8a 01 	sts	0x018A, r18
+     6ec:	b0 93 ef 02 	sts	0x02EF, r27
+     6f0:	a0 93 ee 02 	sts	0x02EE, r26
+     6f4:	80 e0       	ldi	r24, 0x00	; 0
+     6f6:	2e c0       	rjmp	.+92     	; 0x754 <isAligned+0x1a0>
+     6f8:	e9 01       	movw	r28, r18
+     6fa:	68 2d       	mov	r22, r8
+     6fc:	79 2d       	mov	r23, r9
+     6fe:	47 30       	cpi	r20, 0x07	; 7
+     700:	51 05       	cpc	r21, r1
+     702:	49 f4       	brne	.+18     	; 0x716 <isAligned+0x162>
+     704:	30 93 8b 01 	sts	0x018B, r19
+     708:	20 93 8a 01 	sts	0x018A, r18
+     70c:	b0 93 ef 02 	sts	0x02EF, r27
+     710:	a0 93 ee 02 	sts	0x02EE, r26
+     714:	1f c0       	rjmp	.+62     	; 0x754 <isAligned+0x1a0>
+     716:	2f 5f       	subi	r18, 0xFF	; 255
+     718:	3f 4f       	sbci	r19, 0xFF	; 255
+     71a:	34 96       	adiw	r30, 0x04	; 4
+     71c:	27 30       	cpi	r18, 0x07	; 7
+     71e:	31 05       	cpc	r19, r1
+     720:	09 f0       	breq	.+2      	; 0x724 <isAligned+0x170>
+     722:	75 cf       	rjmp	.-278    	; 0x60e <isAligned+0x5a>
+     724:	11 96       	adiw	r26, 0x01	; 1
+     726:	8c e1       	ldi	r24, 0x1C	; 28
+     728:	c8 0e       	add	r12, r24
+     72a:	d1 1c       	adc	r13, r1
+     72c:	a7 30       	cpi	r26, 0x07	; 7
+     72e:	b1 05       	cpc	r27, r1
+     730:	09 f0       	breq	.+2      	; 0x734 <isAligned+0x180>
+     732:	68 cf       	rjmp	.-304    	; 0x604 <isAligned+0x50>
+     734:	30 93 8b 01 	sts	0x018B, r19
+     738:	20 93 8a 01 	sts	0x018A, r18
+     73c:	b0 93 ef 02 	sts	0x02EF, r27
+     740:	a0 93 ee 02 	sts	0x02EE, r26
+     744:	80 e0       	ldi	r24, 0x00	; 0
+     746:	06 c0       	rjmp	.+12     	; 0x754 <isAligned+0x1a0>
+     748:	96 2d       	mov	r25, r6
+     74a:	e5 cf       	rjmp	.-54     	; 0x716 <isAligned+0x162>
+     74c:	93 2d       	mov	r25, r3
+     74e:	e3 cf       	rjmp	.-58     	; 0x716 <isAligned+0x162>
+     750:	97 2d       	mov	r25, r7
+     752:	e1 cf       	rjmp	.-62     	; 0x716 <isAligned+0x162>
+     754:	df 91       	pop	r29
+     756:	cf 91       	pop	r28
+     758:	1f 91       	pop	r17
+     75a:	0f 91       	pop	r16
+     75c:	ff 90       	pop	r15
+     75e:	ef 90       	pop	r14
+     760:	df 90       	pop	r13
+     762:	cf 90       	pop	r12
+     764:	bf 90       	pop	r11
+     766:	af 90       	pop	r10
+     768:	9f 90       	pop	r9
+     76a:	8f 90       	pop	r8
+     76c:	7f 90       	pop	r7
+     76e:	6f 90       	pop	r6
+     770:	5f 90       	pop	r5
+     772:	4f 90       	pop	r4
+     774:	3f 90       	pop	r3
+     776:	08 95       	ret
+
+00000778 <badBreak>:
+}
+}
+void badBreak(){
+while (1)
+{
+	setColor(0,0, 0x0000ff);
+     778:	2f ef       	ldi	r18, 0xFF	; 255
+     77a:	30 e0       	ldi	r19, 0x00	; 0
+     77c:	40 e0       	ldi	r20, 0x00	; 0
+     77e:	50 e0       	ldi	r21, 0x00	; 0
+     780:	60 e0       	ldi	r22, 0x00	; 0
+     782:	80 e0       	ldi	r24, 0x00	; 0
+     784:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+	ws2812_setleds(led,NUM_LEDS);
+     788:	61 e3       	ldi	r22, 0x31	; 49
+     78a:	70 e0       	ldi	r23, 0x00	; 0
+     78c:	8b e5       	ldi	r24, 0x5B	; 91
+     78e:	92 e0       	ldi	r25, 0x02	; 2
+     790:	0e 94 5f 00 	call	0xbe	; 0xbe <ws2812_setleds>
+     794:	2f ef       	ldi	r18, 0xFF	; 255
+     796:	82 e5       	ldi	r24, 0x52	; 82
+     798:	97 e0       	ldi	r25, 0x07	; 7
+     79a:	21 50       	subi	r18, 0x01	; 1
+     79c:	80 40       	sbci	r24, 0x00	; 0
+     79e:	90 40       	sbci	r25, 0x00	; 0
+     7a0:	e1 f7       	brne	.-8      	; 0x79a <badBreak+0x22>
+     7a2:	00 c0       	rjmp	.+0      	; 0x7a4 <badBreak+0x2c>
+     7a4:	00 00       	nop
+	_delay_ms(300);
+	setColor(0,0, 0xff0000);
+     7a6:	20 e0       	ldi	r18, 0x00	; 0
+     7a8:	30 e0       	ldi	r19, 0x00	; 0
+     7aa:	4f ef       	ldi	r20, 0xFF	; 255
+     7ac:	50 e0       	ldi	r21, 0x00	; 0
+     7ae:	60 e0       	ldi	r22, 0x00	; 0
+     7b0:	80 e0       	ldi	r24, 0x00	; 0
+     7b2:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+	ws2812_setleds(led,NUM_LEDS);
+     7b6:	61 e3       	ldi	r22, 0x31	; 49
+     7b8:	70 e0       	ldi	r23, 0x00	; 0
+     7ba:	8b e5       	ldi	r24, 0x5B	; 91
+     7bc:	92 e0       	ldi	r25, 0x02	; 2
+     7be:	0e 94 5f 00 	call	0xbe	; 0xbe <ws2812_setleds>
+     7c2:	2f ef       	ldi	r18, 0xFF	; 255
+     7c4:	82 e5       	ldi	r24, 0x52	; 82
+     7c6:	97 e0       	ldi	r25, 0x07	; 7
+     7c8:	21 50       	subi	r18, 0x01	; 1
+     7ca:	80 40       	sbci	r24, 0x00	; 0
+     7cc:	90 40       	sbci	r25, 0x00	; 0
+     7ce:	e1 f7       	brne	.-8      	; 0x7c8 <badBreak+0x50>
+     7d0:	00 c0       	rjmp	.+0      	; 0x7d2 <badBreak+0x5a>
+     7d2:	00 00       	nop
+     7d4:	d1 cf       	rjmp	.-94     	; 0x778 <badBreak>
+
+000007d6 <makeSetupPattern>:
+#include "all_the_crap_at_the_top.h"
+
+
+
+void makeSetupPattern(void){
+	for(i = 0; i < N_ROWS; i++){
+     7d6:	10 92 ef 02 	sts	0x02EF, r1
+     7da:	10 92 ee 02 	sts	0x02EE, r1
+		for(j = 0; j < N_ROWS; j++){
+     7de:	10 92 8b 01 	sts	0x018B, r1
+     7e2:	10 92 8a 01 	sts	0x018A, r1
+     7e6:	60 e0       	ldi	r22, 0x00	; 0
+     7e8:	70 e0       	ldi	r23, 0x00	; 0
+			if (setupPattern[i][j])
+     7ea:	80 91 ee 02 	lds	r24, 0x02EE
+     7ee:	90 91 ef 02 	lds	r25, 0x02EF
+     7f2:	fc 01       	movw	r30, r24
+     7f4:	ee 0f       	add	r30, r30
+     7f6:	ff 1f       	adc	r31, r31
+     7f8:	ee 0f       	add	r30, r30
+     7fa:	ff 1f       	adc	r31, r31
+     7fc:	ee 0f       	add	r30, r30
+     7fe:	ff 1f       	adc	r31, r31
+     800:	e8 1b       	sub	r30, r24
+     802:	f9 0b       	sbc	r31, r25
+     804:	e6 0f       	add	r30, r22
+     806:	f7 1f       	adc	r31, r23
+     808:	ee 0f       	add	r30, r30
+     80a:	ff 1f       	adc	r31, r31
+     80c:	ec 5f       	subi	r30, 0xFC	; 252
+     80e:	fe 4f       	sbci	r31, 0xFE	; 254
+     810:	20 81       	ld	r18, Z
+     812:	31 81       	ldd	r19, Z+1	; 0x01
+     814:	23 2b       	or	r18, r19
+     816:	39 f0       	breq	.+14     	; 0x826 <makeSetupPattern+0x50>
+			{
+				setColor(i,j, COLOR_SETUP);
+     818:	20 e0       	ldi	r18, 0x00	; 0
+     81a:	30 e8       	ldi	r19, 0x80	; 128
+     81c:	40 e8       	ldi	r20, 0x80	; 128
+     81e:	50 e0       	ldi	r21, 0x00	; 0
+     820:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+     824:	05 c0       	rjmp	.+10     	; 0x830 <makeSetupPattern+0x5a>
+			}
+			else setColor(i,j, COLOR_BLANK);
+     826:	20 e0       	ldi	r18, 0x00	; 0
+     828:	30 e0       	ldi	r19, 0x00	; 0
+     82a:	a9 01       	movw	r20, r18
+     82c:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+
+
+
+void makeSetupPattern(void){
+	for(i = 0; i < N_ROWS; i++){
+		for(j = 0; j < N_ROWS; j++){
+     830:	60 91 8a 01 	lds	r22, 0x018A
+     834:	70 91 8b 01 	lds	r23, 0x018B
+     838:	6f 5f       	subi	r22, 0xFF	; 255
+     83a:	7f 4f       	sbci	r23, 0xFF	; 255
+     83c:	70 93 8b 01 	sts	0x018B, r23
+     840:	60 93 8a 01 	sts	0x018A, r22
+     844:	67 30       	cpi	r22, 0x07	; 7
+     846:	71 05       	cpc	r23, r1
+     848:	84 f2       	brlt	.-96     	; 0x7ea <makeSetupPattern+0x14>
+#include "all_the_crap_at_the_top.h"
+
+
+
+void makeSetupPattern(void){
+	for(i = 0; i < N_ROWS; i++){
+     84a:	80 91 ee 02 	lds	r24, 0x02EE
+     84e:	90 91 ef 02 	lds	r25, 0x02EF
+     852:	01 96       	adiw	r24, 0x01	; 1
+     854:	90 93 ef 02 	sts	0x02EF, r25
+     858:	80 93 ee 02 	sts	0x02EE, r24
+     85c:	07 97       	sbiw	r24, 0x07	; 7
+     85e:	0c f4       	brge	.+2      	; 0x862 <makeSetupPattern+0x8c>
+     860:	be cf       	rjmp	.-132    	; 0x7de <makeSetupPattern+0x8>
+				setColor(i,j, COLOR_SETUP);
+			}
+			else setColor(i,j, COLOR_BLANK);
+		}
+	}
+	ws2812_setleds(led,NUM_LEDS);
+     862:	61 e3       	ldi	r22, 0x31	; 49
+     864:	70 e0       	ldi	r23, 0x00	; 0
+     866:	8b e5       	ldi	r24, 0x5B	; 91
+     868:	92 e0       	ldi	r25, 0x02	; 2
+     86a:	0e 94 5f 00 	call	0xbe	; 0xbe <ws2812_setleds>
+     86e:	08 95       	ret
+
+00000870 <reset>:
+		direction = !direction;
+	}
+}
+
+void reset(){
+	makeSetupPattern();
+     870:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <makeSetupPattern>
+	curr_state = INITIAL_PLACEMENT;
+     874:	10 92 86 01 	sts	0x0186, r1
+     878:	08 95       	ret
+
+0000087a <main>:
+uint8_t curr_x, curr_y;
+
+/********************* MAIN *********************/
+int main(void)
+{
+	board_init();
+     87a:	0e 94 7a 0a 	call	0x14f4	; 0x14f4 <board_init>
+	ioport_init();
+	makeSetupPattern();
+     87e:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <makeSetupPattern>
+	PORT_t *base = arch_ioport_pin_to_base(pin);
+
+	if (dir == IOPORT_DIR_OUTPUT) {
+		base->DIR |= arch_ioport_pin_to_mask(pin);
+	} else if (dir == IOPORT_DIR_INPUT) {
+		base->DIR &=  ~arch_ioport_pin_to_mask(pin);
+     882:	27 98       	cbi	0x04, 7	; 4
+	ioport_set_pin_dir(ROLL_PIN, IOPORT_DIR_INPUT);
+
+	
+	// Indicate a refresh 
+	{
+	setColor(0,0, 0xff0000);
+     884:	20 e0       	ldi	r18, 0x00	; 0
+     886:	30 e0       	ldi	r19, 0x00	; 0
+     888:	4f ef       	ldi	r20, 0xFF	; 255
+     88a:	50 e0       	ldi	r21, 0x00	; 0
+     88c:	60 e0       	ldi	r22, 0x00	; 0
+     88e:	80 e0       	ldi	r24, 0x00	; 0
+     890:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+	ws2812_setleds(led,NUM_LEDS);
+     894:	61 e3       	ldi	r22, 0x31	; 49
+     896:	70 e0       	ldi	r23, 0x00	; 0
+     898:	8b e5       	ldi	r24, 0x5B	; 91
+     89a:	92 e0       	ldi	r25, 0x02	; 2
+     89c:	0e 94 5f 00 	call	0xbe	; 0xbe <ws2812_setleds>
+     8a0:	2f ef       	ldi	r18, 0xFF	; 255
+     8a2:	82 e5       	ldi	r24, 0x52	; 82
+     8a4:	97 e0       	ldi	r25, 0x07	; 7
+     8a6:	21 50       	subi	r18, 0x01	; 1
+     8a8:	80 40       	sbci	r24, 0x00	; 0
+     8aa:	90 40       	sbci	r25, 0x00	; 0
+     8ac:	e1 f7       	brne	.-8      	; 0x8a6 <main+0x2c>
+     8ae:	00 c0       	rjmp	.+0      	; 0x8b0 <main+0x36>
+     8b0:	00 00       	nop
+	_delay_ms(300);
+	setColor(0,0, 0x00000);
+     8b2:	20 e0       	ldi	r18, 0x00	; 0
+     8b4:	30 e0       	ldi	r19, 0x00	; 0
+     8b6:	a9 01       	movw	r20, r18
+     8b8:	60 e0       	ldi	r22, 0x00	; 0
+     8ba:	80 e0       	ldi	r24, 0x00	; 0
+     8bc:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+	ws2812_setleds(led,NUM_LEDS);
+     8c0:	61 e3       	ldi	r22, 0x31	; 49
+     8c2:	70 e0       	ldi	r23, 0x00	; 0
+     8c4:	8b e5       	ldi	r24, 0x5B	; 91
+     8c6:	92 e0       	ldi	r25, 0x02	; 2
+     8c8:	0e 94 5f 00 	call	0xbe	; 0xbe <ws2812_setleds>
+			case INVALID_PICKED_WRONG_PIECE_IN_SECOND_MOVE	:
+				if(!change)
+				break; // No change, do nothing.
+
+				// Player picked up the invalid piece, continue the game
+				if (loc[x] == err_loc[x] && loc[y] == err_loc[y])
+     8cc:	03 e8       	ldi	r16, 0x83	; 131
+     8ce:	13 e0       	ldi	r17, 0x03	; 3
+     8d0:	0f 2e       	mov	r0, r31
+     8d2:	fc e8       	ldi	r31, 0x8C	; 140
+     8d4:	cf 2e       	mov	r12, r31
+     8d6:	f1 e0       	ldi	r31, 0x01	; 1
+     8d8:	df 2e       	mov	r13, r31
+     8da:	f0 2d       	mov	r31, r0
+     8dc:	c4 e8       	ldi	r28, 0x84	; 132
+     8de:	d3 e0       	ldi	r29, 0x03	; 3
+				orig_loc[y] = loc[y];
+				setColor(loc[x], loc[y], COLOR_BLANK); // blank the square that was lifted
+
+				// Illuminate possible options
+				for(i=0;i<2;i++){for(j=0;j<2;j++){for( k = -1; k<2; k += 2 ){ // Triple nest loop
+					curr_x = loc[x] + k*j*dice[i];
+     8e0:	0f 2e       	mov	r0, r31
+     8e2:	fa e8       	ldi	r31, 0x8A	; 138
+     8e4:	ef 2e       	mov	r14, r31
+     8e6:	f1 e0       	ldi	r31, 0x01	; 1
+     8e8:	ff 2e       	mov	r15, r31
+     8ea:	f0 2d       	mov	r31, r0
+	setColor(0,0, 0x00000);
+	ws2812_setleds(led,NUM_LEDS);
+	}
+		
+	while(1){
+		checkAllSquares();
+     8ec:	0e 94 c6 00 	call	0x18c	; 0x18c <checkAllSquares>
+		switch (curr_state)
+     8f0:	80 91 86 01 	lds	r24, 0x0186
+     8f4:	90 e0       	ldi	r25, 0x00	; 0
+     8f6:	8c 30       	cpi	r24, 0x0C	; 12
+     8f8:	91 05       	cpc	r25, r1
+     8fa:	08 f0       	brcs	.+2      	; 0x8fe <main+0x84>
+     8fc:	9f c5       	rjmp	.+2878   	; 0x143c <__stack+0xb3d>
+     8fe:	fc 01       	movw	r30, r24
+     900:	ec 5c       	subi	r30, 0xCC	; 204
+     902:	ff 4f       	sbci	r31, 0xFF	; 255
+     904:	0c 94 8f 0a 	jmp	0x151e	; 0x151e <__tablejump2__>
+		{
+			case INITIAL_PLACEMENT							:
+				num_correct = 0;
+     908:	10 92 85 01 	sts	0x0185, r1
+     90c:	10 92 84 01 	sts	0x0184, r1
+				num_incorrect = 0;
+     910:	10 92 83 01 	sts	0x0183, r1
+     914:	10 92 82 01 	sts	0x0182, r1
+				for (i = 0; i < N_ROWS; i++){
+     918:	10 92 ef 02 	sts	0x02EF, r1
+     91c:	10 92 ee 02 	sts	0x02EE, r1
+					for (j = 0; j < N_COLS; j++){
+     920:	10 92 8b 01 	sts	0x018B, r1
+     924:	10 92 8a 01 	sts	0x018A, r1
+     928:	60 e0       	ldi	r22, 0x00	; 0
+     92a:	70 e0       	ldi	r23, 0x00	; 0
+						if (setupPattern[i][j]){
+     92c:	80 91 ee 02 	lds	r24, 0x02EE
+     930:	90 91 ef 02 	lds	r25, 0x02EF
+     934:	fc 01       	movw	r30, r24
+     936:	ee 0f       	add	r30, r30
+     938:	ff 1f       	adc	r31, r31
+     93a:	ee 0f       	add	r30, r30
+     93c:	ff 1f       	adc	r31, r31
+     93e:	ee 0f       	add	r30, r30
+     940:	ff 1f       	adc	r31, r31
+     942:	e8 1b       	sub	r30, r24
+     944:	f9 0b       	sbc	r31, r25
+     946:	e6 0f       	add	r30, r22
+     948:	f7 1f       	adc	r31, r23
+     94a:	ee 0f       	add	r30, r30
+     94c:	ff 1f       	adc	r31, r31
+     94e:	ec 5f       	subi	r30, 0xFC	; 252
+     950:	fe 4f       	sbci	r31, 0xFE	; 254
+     952:	20 81       	ld	r18, Z
+     954:	31 81       	ldd	r19, Z+1	; 0x01
+     956:	23 2b       	or	r18, r19
+     958:	51 f1       	breq	.+84     	; 0x9ae <__stack+0xaf>
+							if (grid[i][j].occupied){
+     95a:	fc 01       	movw	r30, r24
+     95c:	ee 0f       	add	r30, r30
+     95e:	ff 1f       	adc	r31, r31
+     960:	ee 0f       	add	r30, r30
+     962:	ff 1f       	adc	r31, r31
+     964:	ee 0f       	add	r30, r30
+     966:	ff 1f       	adc	r31, r31
+     968:	e8 1b       	sub	r30, r24
+     96a:	f9 0b       	sbc	r31, r25
+     96c:	e6 0f       	add	r30, r22
+     96e:	f7 1f       	adc	r31, r23
+     970:	ee 0f       	add	r30, r30
+     972:	ff 1f       	adc	r31, r31
+     974:	ee 0f       	add	r30, r30
+     976:	ff 1f       	adc	r31, r31
+     978:	ee 56       	subi	r30, 0x6E	; 110
+     97a:	fe 4f       	sbci	r31, 0xFE	; 254
+     97c:	20 81       	ld	r18, Z
+     97e:	22 23       	and	r18, r18
+     980:	79 f0       	breq	.+30     	; 0x9a0 <__stack+0xa1>
+								setColor(i,j, COLOR_READY);
+     982:	20 e8       	ldi	r18, 0x80	; 128
+     984:	30 e0       	ldi	r19, 0x00	; 0
+     986:	a9 01       	movw	r20, r18
+     988:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+								num_correct++;
+     98c:	80 91 84 01 	lds	r24, 0x0184
+     990:	90 91 85 01 	lds	r25, 0x0185
+     994:	01 96       	adiw	r24, 0x01	; 1
+     996:	90 93 85 01 	sts	0x0185, r25
+     99a:	80 93 84 01 	sts	0x0184, r24
+     99e:	30 c0       	rjmp	.+96     	; 0xa00 <__stack+0x101>
+							}
+							else {
+								setColor(i,j, COLOR_SETUP);
+     9a0:	20 e0       	ldi	r18, 0x00	; 0
+     9a2:	30 e8       	ldi	r19, 0x80	; 128
+     9a4:	40 e8       	ldi	r20, 0x80	; 128
+     9a6:	50 e0       	ldi	r21, 0x00	; 0
+     9a8:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+     9ac:	29 c0       	rjmp	.+82     	; 0xa00 <__stack+0x101>
+							}
+						}
+						else {
+							if (grid[i][j].occupied){
+     9ae:	fc 01       	movw	r30, r24
+     9b0:	ee 0f       	add	r30, r30
+     9b2:	ff 1f       	adc	r31, r31
+     9b4:	ee 0f       	add	r30, r30
+     9b6:	ff 1f       	adc	r31, r31
+     9b8:	ee 0f       	add	r30, r30
+     9ba:	ff 1f       	adc	r31, r31
+     9bc:	e8 1b       	sub	r30, r24
+     9be:	f9 0b       	sbc	r31, r25
+     9c0:	e6 0f       	add	r30, r22
+     9c2:	f7 1f       	adc	r31, r23
+     9c4:	ee 0f       	add	r30, r30
+     9c6:	ff 1f       	adc	r31, r31
+     9c8:	ee 0f       	add	r30, r30
+     9ca:	ff 1f       	adc	r31, r31
+     9cc:	ee 56       	subi	r30, 0x6E	; 110
+     9ce:	fe 4f       	sbci	r31, 0xFE	; 254
+     9d0:	20 81       	ld	r18, Z
+     9d2:	22 23       	and	r18, r18
+     9d4:	81 f0       	breq	.+32     	; 0x9f6 <__stack+0xf7>
+								setColor(i,j, COLOR_INVALID);
+     9d6:	20 e0       	ldi	r18, 0x00	; 0
+     9d8:	30 e0       	ldi	r19, 0x00	; 0
+     9da:	40 ea       	ldi	r20, 0xA0	; 160
+     9dc:	50 e0       	ldi	r21, 0x00	; 0
+     9de:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+								num_incorrect++;
+     9e2:	80 91 82 01 	lds	r24, 0x0182
+     9e6:	90 91 83 01 	lds	r25, 0x0183
+     9ea:	01 96       	adiw	r24, 0x01	; 1
+     9ec:	90 93 83 01 	sts	0x0183, r25
+     9f0:	80 93 82 01 	sts	0x0182, r24
+     9f4:	05 c0       	rjmp	.+10     	; 0xa00 <__stack+0x101>
+							}
+							else {
+								setColor(i,j, 0);
+     9f6:	20 e0       	ldi	r18, 0x00	; 0
+     9f8:	30 e0       	ldi	r19, 0x00	; 0
+     9fa:	a9 01       	movw	r20, r18
+     9fc:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+		{
+			case INITIAL_PLACEMENT							:
+				num_correct = 0;
+				num_incorrect = 0;
+				for (i = 0; i < N_ROWS; i++){
+					for (j = 0; j < N_COLS; j++){
+     a00:	60 91 8a 01 	lds	r22, 0x018A
+     a04:	70 91 8b 01 	lds	r23, 0x018B
+     a08:	6f 5f       	subi	r22, 0xFF	; 255
+     a0a:	7f 4f       	sbci	r23, 0xFF	; 255
+     a0c:	70 93 8b 01 	sts	0x018B, r23
+     a10:	60 93 8a 01 	sts	0x018A, r22
+     a14:	67 30       	cpi	r22, 0x07	; 7
+     a16:	71 05       	cpc	r23, r1
+     a18:	0c f4       	brge	.+2      	; 0xa1c <__stack+0x11d>
+     a1a:	88 cf       	rjmp	.-240    	; 0x92c <__stack+0x2d>
+		switch (curr_state)
+		{
+			case INITIAL_PLACEMENT							:
+				num_correct = 0;
+				num_incorrect = 0;
+				for (i = 0; i < N_ROWS; i++){
+     a1c:	80 91 ee 02 	lds	r24, 0x02EE
+     a20:	90 91 ef 02 	lds	r25, 0x02EF
+     a24:	01 96       	adiw	r24, 0x01	; 1
+     a26:	90 93 ef 02 	sts	0x02EF, r25
+     a2a:	80 93 ee 02 	sts	0x02EE, r24
+     a2e:	07 97       	sbiw	r24, 0x07	; 7
+     a30:	0c f4       	brge	.+2      	; 0xa34 <__stack+0x135>
+     a32:	76 cf       	rjmp	.-276    	; 0x920 <__stack+0x21>
+								
+							}
+						}
+					}
+				}
+				if (num_correct == 7 && num_incorrect == 0){
+     a34:	80 91 84 01 	lds	r24, 0x0184
+     a38:	90 91 85 01 	lds	r25, 0x0185
+     a3c:	07 97       	sbiw	r24, 0x07	; 7
+     a3e:	09 f0       	breq	.+2      	; 0xa42 <__stack+0x143>
+     a40:	fd c4       	rjmp	.+2554   	; 0x143c <__stack+0xb3d>
+     a42:	80 91 82 01 	lds	r24, 0x0182
+     a46:	90 91 83 01 	lds	r25, 0x0183
+     a4a:	89 2b       	or	r24, r25
+     a4c:	09 f0       	breq	.+2      	; 0xa50 <__stack+0x151>
+     a4e:	f6 c4       	rjmp	.+2540   	; 0x143c <__stack+0xb3d>
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+     a50:	10 92 ef 02 	sts	0x02EF, r1
+     a54:	10 92 ee 02 	sts	0x02EE, r1
+     a58:	10 92 8b 01 	sts	0x018B, r1
+     a5c:	10 92 8a 01 	sts	0x018A, r1
+     a60:	60 e0       	ldi	r22, 0x00	; 0
+     a62:	70 e0       	ldi	r23, 0x00	; 0
+						if (setupPattern[i][j]) setColor(i,j, COLOR_OCCUPIED);
+     a64:	80 91 ee 02 	lds	r24, 0x02EE
+     a68:	90 91 ef 02 	lds	r25, 0x02EF
+     a6c:	fc 01       	movw	r30, r24
+     a6e:	ee 0f       	add	r30, r30
+     a70:	ff 1f       	adc	r31, r31
+     a72:	ee 0f       	add	r30, r30
+     a74:	ff 1f       	adc	r31, r31
+     a76:	ee 0f       	add	r30, r30
+     a78:	ff 1f       	adc	r31, r31
+     a7a:	e8 1b       	sub	r30, r24
+     a7c:	f9 0b       	sbc	r31, r25
+     a7e:	e6 0f       	add	r30, r22
+     a80:	f7 1f       	adc	r31, r23
+     a82:	ee 0f       	add	r30, r30
+     a84:	ff 1f       	adc	r31, r31
+     a86:	ec 5f       	subi	r30, 0xFC	; 252
+     a88:	fe 4f       	sbci	r31, 0xFE	; 254
+     a8a:	20 81       	ld	r18, Z
+     a8c:	31 81       	ldd	r19, Z+1	; 0x01
+     a8e:	23 2b       	or	r18, r19
+     a90:	31 f0       	breq	.+12     	; 0xa9e <__stack+0x19f>
+     a92:	2f ef       	ldi	r18, 0xFF	; 255
+     a94:	3f ef       	ldi	r19, 0xFF	; 255
+     a96:	40 e0       	ldi	r20, 0x00	; 0
+     a98:	50 e0       	ldi	r21, 0x00	; 0
+     a9a:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+							}
+						}
+					}
+				}
+				if (num_correct == 7 && num_incorrect == 0){
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+     a9e:	60 91 8a 01 	lds	r22, 0x018A
+     aa2:	70 91 8b 01 	lds	r23, 0x018B
+     aa6:	6f 5f       	subi	r22, 0xFF	; 255
+     aa8:	7f 4f       	sbci	r23, 0xFF	; 255
+     aaa:	70 93 8b 01 	sts	0x018B, r23
+     aae:	60 93 8a 01 	sts	0x018A, r22
+     ab2:	67 30       	cpi	r22, 0x07	; 7
+     ab4:	71 05       	cpc	r23, r1
+     ab6:	b4 f2       	brlt	.-84     	; 0xa64 <__stack+0x165>
+     ab8:	80 91 ee 02 	lds	r24, 0x02EE
+     abc:	90 91 ef 02 	lds	r25, 0x02EF
+     ac0:	01 96       	adiw	r24, 0x01	; 1
+     ac2:	90 93 ef 02 	sts	0x02EF, r25
+     ac6:	80 93 ee 02 	sts	0x02EE, r24
+     aca:	07 97       	sbiw	r24, 0x07	; 7
+     acc:	2c f2       	brlt	.-118    	; 0xa58 <__stack+0x159>
+						if (setupPattern[i][j]) setColor(i,j, COLOR_OCCUPIED);
+						}}
+					direction = rand()&1;
+     ace:	0e 94 f7 0a 	call	0x15ee	; 0x15ee <rand>
+     ad2:	81 70       	andi	r24, 0x01	; 1
+     ad4:	80 93 5a 02 	sts	0x025A, r24
+					switchPlayerAnimation();
+     ad8:	0e 94 65 02 	call	0x4ca	; 0x4ca <switchPlayerAnimation>
+					curr_state = ROLL_DICE;
+     adc:	81 e0       	ldi	r24, 0x01	; 1
+     ade:	80 93 86 01 	sts	0x0186, r24
+     ae2:	ac c4       	rjmp	.+2392   	; 0x143c <__stack+0xb3d>
+				}
+				break;
+				
+			case ROLL_DICE									:
+				if(change){
+     ae4:	80 91 89 01 	lds	r24, 0x0189
+     ae8:	88 23       	and	r24, r24
+     aea:	21 f0       	breq	.+8      	; 0xaf4 <__stack+0x1f5>
+					makeSetupPattern();
+     aec:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <makeSetupPattern>
+					curr_state = INITIAL_PLACEMENT;
+     af0:	10 92 86 01 	sts	0x0186, r1
+				}
+
+				if(ioport_get_pin_level(ROLL_PIN)){
+     af4:	1f 9b       	sbis	0x03, 7	; 3
+     af6:	a2 c4       	rjmp	.+2372   	; 0x143c <__stack+0xb3d>
+					winAnimation();
+     af8:	0e 94 f7 01 	call	0x3ee	; 0x3ee <winAnimation>
+					    dice[0] = (abs(rand()) / (RAND_MAX / (MAX_DICE - 1))) + 1;
+     afc:	0e 94 f7 0a 	call	0x15ee	; 0x15ee <rand>
+     b00:	9c 01       	movw	r18, r24
+     b02:	99 23       	and	r25, r25
+     b04:	24 f4       	brge	.+8      	; 0xb0e <__stack+0x20f>
+     b06:	88 27       	eor	r24, r24
+     b08:	99 27       	eor	r25, r25
+     b0a:	82 1b       	sub	r24, r18
+     b0c:	93 0b       	sbc	r25, r19
+     b0e:	69 e9       	ldi	r22, 0x99	; 153
+     b10:	79 e1       	ldi	r23, 0x19	; 25
+     b12:	0e 94 7b 0a 	call	0x14f6	; 0x14f6 <__divmodhi4>
+     b16:	81 e0       	ldi	r24, 0x01	; 1
+     b18:	86 0f       	add	r24, r22
+     b1a:	80 93 87 01 	sts	0x0187, r24
+					 if((dice[1] = (abs(rand()) / (RAND_MAX / (MAX_DICE - 1))) + 1) == dice[0])
+     b1e:	0e 94 f7 0a 	call	0x15ee	; 0x15ee <rand>
+     b22:	99 23       	and	r25, r25
+     b24:	1c f4       	brge	.+6      	; 0xb2c <__stack+0x22d>
+     b26:	91 95       	neg	r25
+     b28:	81 95       	neg	r24
+     b2a:	91 09       	sbc	r25, r1
+     b2c:	69 e9       	ldi	r22, 0x99	; 153
+     b2e:	79 e1       	ldi	r23, 0x19	; 25
+     b30:	0e 94 7b 0a 	call	0x14f6	; 0x14f6 <__divmodhi4>
+     b34:	81 e0       	ldi	r24, 0x01	; 1
+     b36:	86 0f       	add	r24, r22
+     b38:	80 93 88 01 	sts	0x0188, r24
+     b3c:	90 91 87 01 	lds	r25, 0x0187
+     b40:	89 13       	cpse	r24, r25
+     b42:	03 c0       	rjmp	.+6      	; 0xb4a <__stack+0x24b>
+						switchPlayerAnimation();
+     b44:	0e 94 65 02 	call	0x4ca	; 0x4ca <switchPlayerAnimation>
+     b48:	79 c4       	rjmp	.+2290   	; 0x143c <__stack+0xb3d>
+					else
+						curr_state = FIRST_MOVE_BEFORE_PICK;
+     b4a:	82 e0       	ldi	r24, 0x02	; 2
+     b4c:	80 93 86 01 	sts	0x0186, r24
+     b50:	75 c4       	rjmp	.+2282   	; 0x143c <__stack+0xb3d>
+				break;
+				
+				
+				
+			case FIRST_MOVE_BEFORE_PICK						:
+				if(!change) 
+     b52:	80 91 89 01 	lds	r24, 0x0189
+     b56:	88 23       	and	r24, r24
+     b58:	09 f4       	brne	.+2      	; 0xb5c <__stack+0x25d>
+     b5a:	70 c4       	rjmp	.+2272   	; 0x143c <__stack+0xb3d>
+					break; // No change, do nothing.
+				
+					// Save the square that was lifted
+				orig_loc[x] = loc[x];
+     b5c:	d8 01       	movw	r26, r16
+     b5e:	8c 91       	ld	r24, X
+     b60:	80 93 58 02 	sts	0x0258, r24
+				orig_loc[y] = loc[y];
+     b64:	68 81       	ld	r22, Y
+     b66:	60 93 59 02 	sts	0x0259, r22
+				setColor(loc[x], loc[y], COLOR_BLANK); // blank the square that was lifted
+     b6a:	20 e0       	ldi	r18, 0x00	; 0
+     b6c:	30 e0       	ldi	r19, 0x00	; 0
+     b6e:	a9 01       	movw	r20, r18
+     b70:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+
+				// Illuminate possible options
+				for(i=0;i<2;i++){for(j=0;j<2;j++){for( k = -1; k<2; k += 2 ){ // Triple nest loop
+     b74:	10 92 ef 02 	sts	0x02EF, r1
+     b78:	10 92 ee 02 	sts	0x02EE, r1
+					curr_x = loc[x] + k*j*dice[i];
+					curr_y = loc[y] + k*(!j)*dice[i];
+     b7c:	44 24       	eor	r4, r4
+     b7e:	43 94       	inc	r4
+						&&	(curr_x >= 0 && curr_x < N_COLS)	// Is not out of bounds
+						&&	(curr_y >= 0 && curr_y < N_ROWS))
+					{
+						setColor( curr_x, curr_y, COLOR_READY);
+						grid[curr_x][curr_y].placement_option = true;
+						grid[curr_x][curr_y].die = i;
+     b80:	0f 2e       	mov	r0, r31
+     b82:	fe ee       	ldi	r31, 0xEE	; 238
+     b84:	8f 2e       	mov	r8, r31
+     b86:	f2 e0       	ldi	r31, 0x02	; 2
+     b88:	9f 2e       	mov	r9, r31
+     b8a:	f0 2d       	mov	r31, r0
+				orig_loc[x] = loc[x];
+				orig_loc[y] = loc[y];
+				setColor(loc[x], loc[y], COLOR_BLANK); // blank the square that was lifted
+
+				// Illuminate possible options
+				for(i=0;i<2;i++){for(j=0;j<2;j++){for( k = -1; k<2; k += 2 ){ // Triple nest loop
+     b8c:	aa 24       	eor	r10, r10
+     b8e:	aa 94       	dec	r10
+     b90:	ba 2c       	mov	r11, r10
+					curr_x = loc[x] + k*j*dice[i];
+					curr_y = loc[y] + k*(!j)*dice[i];
+     b92:	74 2c       	mov	r7, r4
+				orig_loc[x] = loc[x];
+				orig_loc[y] = loc[y];
+				setColor(loc[x], loc[y], COLOR_BLANK); // blank the square that was lifted
+
+				// Illuminate possible options
+				for(i=0;i<2;i++){for(j=0;j<2;j++){for( k = -1; k<2; k += 2 ){ // Triple nest loop
+     b94:	10 92 8b 01 	sts	0x018B, r1
+     b98:	10 92 8a 01 	sts	0x018A, r1
+     b9c:	55 24       	eor	r5, r5
+     b9e:	5a 94       	dec	r5
+					curr_x = loc[x] + k*j*dice[i];
+					curr_y = loc[y] + k*(!j)*dice[i];
+     ba0:	61 2c       	mov	r6, r1
+				orig_loc[x] = loc[x];
+				orig_loc[y] = loc[y];
+				setColor(loc[x], loc[y], COLOR_BLANK); // blank the square that was lifted
+
+				// Illuminate possible options
+				for(i=0;i<2;i++){for(j=0;j<2;j++){for( k = -1; k<2; k += 2 ){ // Triple nest loop
+     ba2:	b0 92 57 02 	sts	0x0257, r11
+     ba6:	a0 92 56 02 	sts	0x0256, r10
+     baa:	85 2d       	mov	r24, r5
+					curr_x = loc[x] + k*j*dice[i];
+     bac:	e0 91 ee 02 	lds	r30, 0x02EE
+     bb0:	f0 91 ef 02 	lds	r31, 0x02EF
+     bb4:	e9 57       	subi	r30, 0x79	; 121
+     bb6:	fe 4f       	sbci	r31, 0xFE	; 254
+     bb8:	d7 01       	movw	r26, r14
+     bba:	3c 91       	ld	r19, X
+     bbc:	20 81       	ld	r18, Z
+     bbe:	32 9f       	mul	r19, r18
+     bc0:	30 2d       	mov	r19, r0
+     bc2:	11 24       	eor	r1, r1
+     bc4:	f8 01       	movw	r30, r16
+     bc6:	90 81       	ld	r25, Z
+     bc8:	38 9f       	mul	r19, r24
+     bca:	90 0d       	add	r25, r0
+     bcc:	11 24       	eor	r1, r1
+     bce:	90 93 8f 01 	sts	0x018F, r25
+					curr_y = loc[y] + k*(!j)*dice[i];
+     bd2:	82 9f       	mul	r24, r18
+     bd4:	80 2d       	mov	r24, r0
+     bd6:	11 24       	eor	r1, r1
+     bd8:	47 2d       	mov	r20, r7
+     bda:	20 91 8a 01 	lds	r18, 0x018A
+     bde:	30 91 8b 01 	lds	r19, 0x018B
+     be2:	23 2b       	or	r18, r19
+     be4:	09 f0       	breq	.+2      	; 0xbe8 <__stack+0x2e9>
+     be6:	46 2d       	mov	r20, r6
+     be8:	68 81       	ld	r22, Y
+     bea:	84 9f       	mul	r24, r20
+     bec:	60 0d       	add	r22, r0
+     bee:	11 24       	eor	r1, r1
+     bf0:	60 93 87 03 	sts	0x0387, r22
+					if (!grid[curr_x][curr_y].occupied			// Not already a piece there
+     bf4:	27 e0       	ldi	r18, 0x07	; 7
+     bf6:	92 9f       	mul	r25, r18
+     bf8:	f0 01       	movw	r30, r0
+     bfa:	11 24       	eor	r1, r1
+     bfc:	e6 0f       	add	r30, r22
+     bfe:	f1 1d       	adc	r31, r1
+     c00:	ee 0f       	add	r30, r30
+     c02:	ff 1f       	adc	r31, r31
+     c04:	ee 0f       	add	r30, r30
+     c06:	ff 1f       	adc	r31, r31
+     c08:	ee 56       	subi	r30, 0x6E	; 110
+     c0a:	fe 4f       	sbci	r31, 0xFE	; 254
+     c0c:	80 81       	ld	r24, Z
+     c0e:	81 11       	cpse	r24, r1
+     c10:	1e c0       	rjmp	.+60     	; 0xc4e <__stack+0x34f>
+						&&	(curr_x >= 0 && curr_x < N_COLS)	// Is not out of bounds
+     c12:	97 30       	cpi	r25, 0x07	; 7
+     c14:	e0 f4       	brcc	.+56     	; 0xc4e <__stack+0x34f>
+						&&	(curr_y >= 0 && curr_y < N_ROWS))
+     c16:	67 30       	cpi	r22, 0x07	; 7
+     c18:	d0 f4       	brcc	.+52     	; 0xc4e <__stack+0x34f>
+					{
+						setColor( curr_x, curr_y, COLOR_READY);
+     c1a:	20 e8       	ldi	r18, 0x80	; 128
+     c1c:	30 e0       	ldi	r19, 0x00	; 0
+     c1e:	a9 01       	movw	r20, r18
+     c20:	89 2f       	mov	r24, r25
+     c22:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+						grid[curr_x][curr_y].placement_option = true;
+     c26:	e0 91 8f 01 	lds	r30, 0x018F
+     c2a:	80 91 87 03 	lds	r24, 0x0387
+     c2e:	97 e0       	ldi	r25, 0x07	; 7
+     c30:	e9 9f       	mul	r30, r25
+     c32:	f0 01       	movw	r30, r0
+     c34:	11 24       	eor	r1, r1
+     c36:	e8 0f       	add	r30, r24
+     c38:	f1 1d       	adc	r31, r1
+     c3a:	ee 0f       	add	r30, r30
+     c3c:	ff 1f       	adc	r31, r31
+     c3e:	ee 0f       	add	r30, r30
+     c40:	ff 1f       	adc	r31, r31
+     c42:	ee 56       	subi	r30, 0x6E	; 110
+     c44:	fe 4f       	sbci	r31, 0xFE	; 254
+     c46:	42 82       	std	Z+2, r4	; 0x02
+						grid[curr_x][curr_y].die = i;
+     c48:	d4 01       	movw	r26, r8
+     c4a:	8c 91       	ld	r24, X
+     c4c:	83 83       	std	Z+3, r24	; 0x03
+				orig_loc[x] = loc[x];
+				orig_loc[y] = loc[y];
+				setColor(loc[x], loc[y], COLOR_BLANK); // blank the square that was lifted
+
+				// Illuminate possible options
+				for(i=0;i<2;i++){for(j=0;j<2;j++){for( k = -1; k<2; k += 2 ){ // Triple nest loop
+     c4e:	80 91 56 02 	lds	r24, 0x0256
+     c52:	90 91 57 02 	lds	r25, 0x0257
+     c56:	02 96       	adiw	r24, 0x02	; 2
+     c58:	90 93 57 02 	sts	0x0257, r25
+     c5c:	80 93 56 02 	sts	0x0256, r24
+     c60:	82 30       	cpi	r24, 0x02	; 2
+     c62:	91 05       	cpc	r25, r1
+     c64:	0c f4       	brge	.+2      	; 0xc68 <__stack+0x369>
+     c66:	a2 cf       	rjmp	.-188    	; 0xbac <__stack+0x2ad>
+     c68:	80 91 8a 01 	lds	r24, 0x018A
+     c6c:	90 91 8b 01 	lds	r25, 0x018B
+     c70:	01 96       	adiw	r24, 0x01	; 1
+     c72:	90 93 8b 01 	sts	0x018B, r25
+     c76:	80 93 8a 01 	sts	0x018A, r24
+     c7a:	02 97       	sbiw	r24, 0x02	; 2
+     c7c:	0c f4       	brge	.+2      	; 0xc80 <__stack+0x381>
+     c7e:	91 cf       	rjmp	.-222    	; 0xba2 <__stack+0x2a3>
+     c80:	80 91 ee 02 	lds	r24, 0x02EE
+     c84:	90 91 ef 02 	lds	r25, 0x02EF
+     c88:	01 96       	adiw	r24, 0x01	; 1
+     c8a:	90 93 ef 02 	sts	0x02EF, r25
+     c8e:	80 93 ee 02 	sts	0x02EE, r24
+     c92:	02 97       	sbiw	r24, 0x02	; 2
+     c94:	0c f4       	brge	.+2      	; 0xc98 <__stack+0x399>
+     c96:	7e cf       	rjmp	.-260    	; 0xb94 <__stack+0x295>
+						grid[curr_x][curr_y].die = i;
+					}
+				}
+				}
+				}
+				curr_state = FIRST_MOVE_AFTER_PICK;
+     c98:	83 e0       	ldi	r24, 0x03	; 3
+     c9a:	80 93 86 01 	sts	0x0186, r24
+				break;
+     c9e:	ce c3       	rjmp	.+1948   	; 0x143c <__stack+0xb3d>
+
+
+			case FIRST_MOVE_AFTER_PICK						:
+				if(!change)
+     ca0:	80 91 89 01 	lds	r24, 0x0189
+     ca4:	88 23       	and	r24, r24
+     ca6:	09 f4       	brne	.+2      	; 0xcaa <__stack+0x3ab>
+     ca8:	c9 c3       	rjmp	.+1938   	; 0x143c <__stack+0xb3d>
+					break; // No change, do nothing.
+					
+					// Player picked up another piece
+				if( !grid[loc[0]][loc[1]].occupied ){
+     caa:	f8 01       	movw	r30, r16
+     cac:	80 81       	ld	r24, Z
+     cae:	68 81       	ld	r22, Y
+     cb0:	46 2f       	mov	r20, r22
+     cb2:	50 e0       	ldi	r21, 0x00	; 0
+     cb4:	28 2f       	mov	r18, r24
+     cb6:	30 e0       	ldi	r19, 0x00	; 0
+     cb8:	fa 01       	movw	r30, r20
+     cba:	97 e0       	ldi	r25, 0x07	; 7
+     cbc:	89 9f       	mul	r24, r25
+     cbe:	e0 0d       	add	r30, r0
+     cc0:	f1 1d       	adc	r31, r1
+     cc2:	11 24       	eor	r1, r1
+     cc4:	ee 0f       	add	r30, r30
+     cc6:	ff 1f       	adc	r31, r31
+     cc8:	ee 0f       	add	r30, r30
+     cca:	ff 1f       	adc	r31, r31
+     ccc:	ee 56       	subi	r30, 0x6E	; 110
+     cce:	fe 4f       	sbci	r31, 0xFE	; 254
+     cd0:	90 81       	ld	r25, Z
+     cd2:	91 11       	cpse	r25, r1
+     cd4:	0e c0       	rjmp	.+28     	; 0xcf2 <__stack+0x3f3>
+					err_loc[x] = loc[x];
+     cd6:	d6 01       	movw	r26, r12
+     cd8:	8c 93       	st	X, r24
+					err_loc[y] = loc[y];
+     cda:	60 93 8d 01 	sts	0x018D, r22
+					setColor(loc[x],loc[y], COLOR_INVALID);
+     cde:	20 e0       	ldi	r18, 0x00	; 0
+     ce0:	30 e0       	ldi	r19, 0x00	; 0
+     ce2:	40 ea       	ldi	r20, 0xA0	; 160
+     ce4:	50 e0       	ldi	r21, 0x00	; 0
+     ce6:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = INVALID_PICKED_SECOND_PIECE_IN_FIRST_MOVE;
+     cea:	88 e0       	ldi	r24, 0x08	; 8
+     cec:	80 93 86 01 	sts	0x0186, r24
+					break;
+     cf0:	a5 c3       	rjmp	.+1866   	; 0x143c <__stack+0xb3d>
+				}
+					// Player put the piece back in the same spot
+				else if ( loc[x] == orig_loc[x] && loc[y] == orig_loc[y] )
+     cf2:	90 91 58 02 	lds	r25, 0x0258
+     cf6:	89 13       	cpse	r24, r25
+     cf8:	b6 c3       	rjmp	.+1900   	; 0x1466 <__stack+0xb67>
+     cfa:	90 91 59 02 	lds	r25, 0x0259
+     cfe:	69 13       	cpse	r22, r25
+     d00:	69 c0       	rjmp	.+210    	; 0xdd4 <__stack+0x4d5>
+				{
+					// Undo valid placements
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+     d02:	10 92 ef 02 	sts	0x02EF, r1
+     d06:	10 92 ee 02 	sts	0x02EE, r1
+     d0a:	10 92 8b 01 	sts	0x018B, r1
+     d0e:	10 92 8a 01 	sts	0x018A, r1
+     d12:	60 e0       	ldi	r22, 0x00	; 0
+     d14:	70 e0       	ldi	r23, 0x00	; 0
+						if (grid[i][j].placement_option)
+     d16:	80 91 ee 02 	lds	r24, 0x02EE
+     d1a:	90 91 ef 02 	lds	r25, 0x02EF
+     d1e:	dc 01       	movw	r26, r24
+     d20:	aa 0f       	add	r26, r26
+     d22:	bb 1f       	adc	r27, r27
+     d24:	aa 0f       	add	r26, r26
+     d26:	bb 1f       	adc	r27, r27
+     d28:	aa 0f       	add	r26, r26
+     d2a:	bb 1f       	adc	r27, r27
+     d2c:	a8 1b       	sub	r26, r24
+     d2e:	b9 0b       	sbc	r27, r25
+     d30:	a6 0f       	add	r26, r22
+     d32:	b7 1f       	adc	r27, r23
+     d34:	aa 0f       	add	r26, r26
+     d36:	bb 1f       	adc	r27, r27
+     d38:	aa 0f       	add	r26, r26
+     d3a:	bb 1f       	adc	r27, r27
+     d3c:	ae 56       	subi	r26, 0x6E	; 110
+     d3e:	be 4f       	sbci	r27, 0xFE	; 254
+     d40:	12 96       	adiw	r26, 0x02	; 2
+     d42:	2c 91       	ld	r18, X
+     d44:	22 23       	and	r18, r18
+     d46:	f9 f0       	breq	.+62     	; 0xd86 <__stack+0x487>
+						{
+							setColor(i,j, COLOR_BLANK);
+     d48:	20 e0       	ldi	r18, 0x00	; 0
+     d4a:	30 e0       	ldi	r19, 0x00	; 0
+     d4c:	a9 01       	movw	r20, r18
+     d4e:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+							grid[i][j].placement_option = false;
+     d52:	80 91 ee 02 	lds	r24, 0x02EE
+     d56:	90 91 ef 02 	lds	r25, 0x02EF
+     d5a:	fc 01       	movw	r30, r24
+     d5c:	ee 0f       	add	r30, r30
+     d5e:	ff 1f       	adc	r31, r31
+     d60:	ee 0f       	add	r30, r30
+     d62:	ff 1f       	adc	r31, r31
+     d64:	ee 0f       	add	r30, r30
+     d66:	ff 1f       	adc	r31, r31
+     d68:	e8 1b       	sub	r30, r24
+     d6a:	f9 0b       	sbc	r31, r25
+     d6c:	80 91 8a 01 	lds	r24, 0x018A
+     d70:	90 91 8b 01 	lds	r25, 0x018B
+     d74:	e8 0f       	add	r30, r24
+     d76:	f9 1f       	adc	r31, r25
+     d78:	ee 0f       	add	r30, r30
+     d7a:	ff 1f       	adc	r31, r31
+     d7c:	ee 0f       	add	r30, r30
+     d7e:	ff 1f       	adc	r31, r31
+     d80:	ee 56       	subi	r30, 0x6E	; 110
+     d82:	fe 4f       	sbci	r31, 0xFE	; 254
+     d84:	12 82       	std	Z+2, r1	; 0x02
+				}
+					// Player put the piece back in the same spot
+				else if ( loc[x] == orig_loc[x] && loc[y] == orig_loc[y] )
+				{
+					// Undo valid placements
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+     d86:	80 91 8a 01 	lds	r24, 0x018A
+     d8a:	90 91 8b 01 	lds	r25, 0x018B
+     d8e:	01 96       	adiw	r24, 0x01	; 1
+     d90:	90 93 8b 01 	sts	0x018B, r25
+     d94:	80 93 8a 01 	sts	0x018A, r24
+     d98:	87 30       	cpi	r24, 0x07	; 7
+     d9a:	91 05       	cpc	r25, r1
+     d9c:	14 f4       	brge	.+4      	; 0xda2 <__stack+0x4a3>
+     d9e:	bc 01       	movw	r22, r24
+     da0:	ba cf       	rjmp	.-140    	; 0xd16 <__stack+0x417>
+     da2:	80 91 ee 02 	lds	r24, 0x02EE
+     da6:	90 91 ef 02 	lds	r25, 0x02EF
+     daa:	01 96       	adiw	r24, 0x01	; 1
+     dac:	90 93 ef 02 	sts	0x02EF, r25
+     db0:	80 93 ee 02 	sts	0x02EE, r24
+     db4:	07 97       	sbiw	r24, 0x07	; 7
+     db6:	0c f4       	brge	.+2      	; 0xdba <__stack+0x4bb>
+     db8:	a8 cf       	rjmp	.-176    	; 0xd0a <__stack+0x40b>
+							setColor(i,j, COLOR_BLANK);
+							grid[i][j].placement_option = false;
+						}
+					}}
+						// Set placed piece back to occupied
+					setColor(loc[x],loc[y], COLOR_OCCUPIED);
+     dba:	2f ef       	ldi	r18, 0xFF	; 255
+     dbc:	3f ef       	ldi	r19, 0xFF	; 255
+     dbe:	40 e0       	ldi	r20, 0x00	; 0
+     dc0:	50 e0       	ldi	r21, 0x00	; 0
+     dc2:	68 81       	ld	r22, Y
+     dc4:	f8 01       	movw	r30, r16
+     dc6:	80 81       	ld	r24, Z
+     dc8:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = FIRST_MOVE_BEFORE_PICK;
+     dcc:	82 e0       	ldi	r24, 0x02	; 2
+     dce:	80 93 86 01 	sts	0x0186, r24
+					break;
+     dd2:	34 c3       	rjmp	.+1640   	; 0x143c <__stack+0xb3d>
+				}
+					// Placed in invalid location
+				else if ( !grid[loc[0]][loc[1]].placement_option )
+     dd4:	f9 01       	movw	r30, r18
+     dd6:	ee 0f       	add	r30, r30
+     dd8:	ff 1f       	adc	r31, r31
+     dda:	ee 0f       	add	r30, r30
+     ddc:	ff 1f       	adc	r31, r31
+     dde:	ee 0f       	add	r30, r30
+     de0:	ff 1f       	adc	r31, r31
+     de2:	df 01       	movw	r26, r30
+     de4:	a2 1b       	sub	r26, r18
+     de6:	b3 0b       	sbc	r27, r19
+     de8:	4a 0f       	add	r20, r26
+     dea:	5b 1f       	adc	r21, r27
+     dec:	fa 01       	movw	r30, r20
+     dee:	ee 0f       	add	r30, r30
+     df0:	ff 1f       	adc	r31, r31
+     df2:	ee 0f       	add	r30, r30
+     df4:	ff 1f       	adc	r31, r31
+     df6:	ee 56       	subi	r30, 0x6E	; 110
+     df8:	fe 4f       	sbci	r31, 0xFE	; 254
+     dfa:	92 81       	ldd	r25, Z+2	; 0x02
+     dfc:	91 11       	cpse	r25, r1
+     dfe:	0e c0       	rjmp	.+28     	; 0xe1c <__stack+0x51d>
+				{
+					err_loc[x] = loc[x];
+     e00:	f6 01       	movw	r30, r12
+     e02:	80 83       	st	Z, r24
+					err_loc[y] = loc[y];
+     e04:	60 93 8d 01 	sts	0x018D, r22
+					setColor(loc[x],loc[y], COLOR_INVALID);
+     e08:	20 e0       	ldi	r18, 0x00	; 0
+     e0a:	30 e0       	ldi	r19, 0x00	; 0
+     e0c:	40 ea       	ldi	r20, 0xA0	; 160
+     e0e:	50 e0       	ldi	r21, 0x00	; 0
+     e10:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = INVALID_PLACEMENT_IN_FIRST_MOVE;
+     e14:	87 e0       	ldi	r24, 0x07	; 7
+     e16:	80 93 86 01 	sts	0x0186, r24
+					break;
+     e1a:	10 c3       	rjmp	.+1568   	; 0x143c <__stack+0xb3d>
+				}
+
+				// Placed in valid location
+				else if ( grid[loc[0]][loc[1]].placement_option ){
+					if (isAligned()){
+     e1c:	0e 94 da 02 	call	0x5b4	; 0x5b4 <isAligned>
+     e20:	88 23       	and	r24, r24
+     e22:	29 f0       	breq	.+10     	; 0xe2e <__stack+0x52f>
+						winAnimation();
+     e24:	0e 94 f7 01 	call	0x3ee	; 0x3ee <winAnimation>
+						reset();
+     e28:	0e 94 38 04 	call	0x870	; 0x870 <reset>
+						break;
+     e2c:	07 c3       	rjmp	.+1550   	; 0x143c <__stack+0xb3d>
+					}
+					// Undo valid placements
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+     e2e:	10 92 ef 02 	sts	0x02EF, r1
+     e32:	10 92 ee 02 	sts	0x02EE, r1
+     e36:	10 92 8b 01 	sts	0x018B, r1
+     e3a:	10 92 8a 01 	sts	0x018A, r1
+     e3e:	60 e0       	ldi	r22, 0x00	; 0
+     e40:	70 e0       	ldi	r23, 0x00	; 0
+						if (grid[i][j].placement_option)
+     e42:	80 91 ee 02 	lds	r24, 0x02EE
+     e46:	90 91 ef 02 	lds	r25, 0x02EF
+     e4a:	fc 01       	movw	r30, r24
+     e4c:	ee 0f       	add	r30, r30
+     e4e:	ff 1f       	adc	r31, r31
+     e50:	ee 0f       	add	r30, r30
+     e52:	ff 1f       	adc	r31, r31
+     e54:	ee 0f       	add	r30, r30
+     e56:	ff 1f       	adc	r31, r31
+     e58:	e8 1b       	sub	r30, r24
+     e5a:	f9 0b       	sbc	r31, r25
+     e5c:	e6 0f       	add	r30, r22
+     e5e:	f7 1f       	adc	r31, r23
+     e60:	ee 0f       	add	r30, r30
+     e62:	ff 1f       	adc	r31, r31
+     e64:	ee 0f       	add	r30, r30
+     e66:	ff 1f       	adc	r31, r31
+     e68:	ee 56       	subi	r30, 0x6E	; 110
+     e6a:	fe 4f       	sbci	r31, 0xFE	; 254
+     e6c:	22 81       	ldd	r18, Z+2	; 0x02
+     e6e:	22 23       	and	r18, r18
+     e70:	f9 f0       	breq	.+62     	; 0xeb0 <__stack+0x5b1>
+						{
+							setColor(i,j, COLOR_BLANK);
+     e72:	20 e0       	ldi	r18, 0x00	; 0
+     e74:	30 e0       	ldi	r19, 0x00	; 0
+     e76:	a9 01       	movw	r20, r18
+     e78:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+							grid[i][j].placement_option = false;
+     e7c:	80 91 ee 02 	lds	r24, 0x02EE
+     e80:	90 91 ef 02 	lds	r25, 0x02EF
+     e84:	fc 01       	movw	r30, r24
+     e86:	ee 0f       	add	r30, r30
+     e88:	ff 1f       	adc	r31, r31
+     e8a:	ee 0f       	add	r30, r30
+     e8c:	ff 1f       	adc	r31, r31
+     e8e:	ee 0f       	add	r30, r30
+     e90:	ff 1f       	adc	r31, r31
+     e92:	e8 1b       	sub	r30, r24
+     e94:	f9 0b       	sbc	r31, r25
+     e96:	80 91 8a 01 	lds	r24, 0x018A
+     e9a:	90 91 8b 01 	lds	r25, 0x018B
+     e9e:	e8 0f       	add	r30, r24
+     ea0:	f9 1f       	adc	r31, r25
+     ea2:	ee 0f       	add	r30, r30
+     ea4:	ff 1f       	adc	r31, r31
+     ea6:	ee 0f       	add	r30, r30
+     ea8:	ff 1f       	adc	r31, r31
+     eaa:	ee 56       	subi	r30, 0x6E	; 110
+     eac:	fe 4f       	sbci	r31, 0xFE	; 254
+     eae:	12 82       	std	Z+2, r1	; 0x02
+						winAnimation();
+						reset();
+						break;
+					}
+					// Undo valid placements
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+     eb0:	60 91 8a 01 	lds	r22, 0x018A
+     eb4:	70 91 8b 01 	lds	r23, 0x018B
+     eb8:	6f 5f       	subi	r22, 0xFF	; 255
+     eba:	7f 4f       	sbci	r23, 0xFF	; 255
+     ebc:	70 93 8b 01 	sts	0x018B, r23
+     ec0:	60 93 8a 01 	sts	0x018A, r22
+     ec4:	67 30       	cpi	r22, 0x07	; 7
+     ec6:	71 05       	cpc	r23, r1
+     ec8:	0c f4       	brge	.+2      	; 0xecc <__stack+0x5cd>
+     eca:	bb cf       	rjmp	.-138    	; 0xe42 <__stack+0x543>
+     ecc:	80 91 ee 02 	lds	r24, 0x02EE
+     ed0:	90 91 ef 02 	lds	r25, 0x02EF
+     ed4:	01 96       	adiw	r24, 0x01	; 1
+     ed6:	90 93 ef 02 	sts	0x02EF, r25
+     eda:	80 93 ee 02 	sts	0x02EE, r24
+     ede:	07 97       	sbiw	r24, 0x07	; 7
+     ee0:	0c f4       	brge	.+2      	; 0xee4 <__stack+0x5e5>
+     ee2:	a9 cf       	rjmp	.-174    	; 0xe36 <__stack+0x537>
+							setColor(i,j, COLOR_BLANK);
+							grid[i][j].placement_option = false;
+						}
+					}}
+					// Set placed piece back to occupied
+					setColor(loc[x],loc[y], COLOR_OCCUPIED);
+     ee4:	2f ef       	ldi	r18, 0xFF	; 255
+     ee6:	3f ef       	ldi	r19, 0xFF	; 255
+     ee8:	40 e0       	ldi	r20, 0x00	; 0
+     eea:	50 e0       	ldi	r21, 0x00	; 0
+     eec:	68 81       	ld	r22, Y
+     eee:	d8 01       	movw	r26, r16
+     ef0:	8c 91       	ld	r24, X
+     ef2:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+
+					// Record which die value was used
+					die_of_first_move = grid[loc[0]][loc[1]].die;
+     ef6:	f8 01       	movw	r30, r16
+     ef8:	90 81       	ld	r25, Z
+     efa:	88 81       	ld	r24, Y
+     efc:	27 e0       	ldi	r18, 0x07	; 7
+     efe:	92 9f       	mul	r25, r18
+     f00:	f0 01       	movw	r30, r0
+     f02:	11 24       	eor	r1, r1
+     f04:	e8 0f       	add	r30, r24
+     f06:	f1 1d       	adc	r31, r1
+     f08:	ee 0f       	add	r30, r30
+     f0a:	ff 1f       	adc	r31, r31
+     f0c:	ee 0f       	add	r30, r30
+     f0e:	ff 1f       	adc	r31, r31
+     f10:	ee 56       	subi	r30, 0x6E	; 110
+     f12:	fe 4f       	sbci	r31, 0xFE	; 254
+     f14:	23 81       	ldd	r18, Z+3	; 0x03
+     f16:	20 93 91 01 	sts	0x0191, r18
+
+					// Record location of first piece
+					first_loc[x] = loc[x];
+     f1a:	90 93 85 03 	sts	0x0385, r25
+					first_loc[y] = loc[y];
+     f1e:	80 93 86 03 	sts	0x0386, r24
+
+					// Record which axis was taken
+					if(loc[x] == orig_loc[x])
+     f22:	20 91 58 02 	lds	r18, 0x0258
+     f26:	92 13       	cpse	r25, r18
+     f28:	03 c0       	rjmp	.+6      	; 0xf30 <__stack+0x631>
+						axis_of_first_movement = x;
+     f2a:	10 92 8e 01 	sts	0x018E, r1
+     f2e:	0a c0       	rjmp	.+20     	; 0xf44 <__stack+0x645>
+					else if (loc[y] == orig_loc[y])
+     f30:	90 91 59 02 	lds	r25, 0x0259
+     f34:	89 13       	cpse	r24, r25
+     f36:	04 c0       	rjmp	.+8      	; 0xf40 <__stack+0x641>
+						axis_of_first_movement = y;
+     f38:	81 e0       	ldi	r24, 0x01	; 1
+     f3a:	80 93 8e 01 	sts	0x018E, r24
+     f3e:	02 c0       	rjmp	.+4      	; 0xf44 <__stack+0x645>
+					else
+						badBreak();
+     f40:	0e 94 bc 03 	call	0x778	; 0x778 <badBreak>
+					curr_state = SECOND_MOVE_BEFORE_PICK;
+     f44:	84 e0       	ldi	r24, 0x04	; 4
+     f46:	80 93 86 01 	sts	0x0186, r24
+					break;
+     f4a:	78 c2       	rjmp	.+1264   	; 0x143c <__stack+0xb3d>
+				}
+				badBreak();
+				
+			case SECOND_MOVE_BEFORE_PICK					:
+				if(!change)
+     f4c:	80 91 89 01 	lds	r24, 0x0189
+     f50:	88 23       	and	r24, r24
+     f52:	09 f4       	brne	.+2      	; 0xf56 <__stack+0x657>
+     f54:	73 c2       	rjmp	.+1254   	; 0x143c <__stack+0xb3d>
+					break; // No change, do nothing.
+				
+				if ((loc[x] == first_loc[x]) && (loc[y] == first_loc[y]))
+     f56:	d8 01       	movw	r26, r16
+     f58:	8c 91       	ld	r24, X
+     f5a:	90 91 85 03 	lds	r25, 0x0385
+     f5e:	89 13       	cpse	r24, r25
+     f60:	99 c2       	rjmp	.+1330   	; 0x1494 <__stack+0xb95>
+     f62:	68 81       	ld	r22, Y
+     f64:	90 91 86 03 	lds	r25, 0x0386
+     f68:	69 13       	cpse	r22, r25
+     f6a:	0e c0       	rjmp	.+28     	; 0xf88 <__stack+0x689>
+				{
+					err_loc[x] = loc[x];
+     f6c:	f6 01       	movw	r30, r12
+     f6e:	80 83       	st	Z, r24
+					err_loc[y] = loc[y];
+     f70:	60 93 8d 01 	sts	0x018D, r22
+					setColor(loc[x],loc[y], COLOR_INVALID);
+     f74:	20 e0       	ldi	r18, 0x00	; 0
+     f76:	30 e0       	ldi	r19, 0x00	; 0
+     f78:	40 ea       	ldi	r20, 0xA0	; 160
+     f7a:	50 e0       	ldi	r21, 0x00	; 0
+     f7c:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = INVALID_PICKED_WRONG_PIECE_IN_SECOND_MOVE;
+     f80:	8b e0       	ldi	r24, 0x0B	; 11
+     f82:	80 93 86 01 	sts	0x0186, r24
+					break;
+     f86:	5a c2       	rjmp	.+1204   	; 0x143c <__stack+0xb3d>
+				}
+
+				// Save the square that was lifted
+				orig_loc[x] = loc[x];
+     f88:	80 93 58 02 	sts	0x0258, r24
+				orig_loc[y] = loc[y];
+     f8c:	68 81       	ld	r22, Y
+     f8e:	60 93 59 02 	sts	0x0259, r22
+				setColor(loc[x], loc[y], COLOR_BLANK); // blank the square that was lifted
+     f92:	20 e0       	ldi	r18, 0x00	; 0
+     f94:	30 e0       	ldi	r19, 0x00	; 0
+     f96:	a9 01       	movw	r20, r18
+     f98:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+
+				// Illuminate possible options
+				for( k = -1; k<2; k += 2 ){
+     f9c:	8f ef       	ldi	r24, 0xFF	; 255
+     f9e:	9f ef       	ldi	r25, 0xFF	; 255
+     fa0:	90 93 57 02 	sts	0x0257, r25
+     fa4:	80 93 56 02 	sts	0x0256, r24
+     fa8:	85 c2       	rjmp	.+1290   	; 0x14b4 <__stack+0xbb5>
+					if (axis_of_first_movement == x)
+     faa:	90 91 8e 01 	lds	r25, 0x018E
+     fae:	91 11       	cpse	r25, r1
+     fb0:	17 c0       	rjmp	.+46     	; 0xfe0 <__stack+0x6e1>
+					{
+						curr_x = loc[x] + k*dice[!die_of_first_move];
+     fb2:	2a 2d       	mov	r18, r10
+     fb4:	3b 2d       	mov	r19, r11
+     fb6:	90 91 91 01 	lds	r25, 0x0191
+     fba:	99 23       	and	r25, r25
+     fbc:	11 f0       	breq	.+4      	; 0xfc2 <__stack+0x6c3>
+     fbe:	28 2d       	mov	r18, r8
+     fc0:	39 2d       	mov	r19, r9
+     fc2:	f9 01       	movw	r30, r18
+     fc4:	e9 57       	subi	r30, 0x79	; 121
+     fc6:	fe 4f       	sbci	r31, 0xFE	; 254
+     fc8:	20 81       	ld	r18, Z
+     fca:	d8 01       	movw	r26, r16
+     fcc:	9c 91       	ld	r25, X
+     fce:	28 9f       	mul	r18, r24
+     fd0:	90 0d       	add	r25, r0
+     fd2:	11 24       	eor	r1, r1
+     fd4:	90 93 8f 01 	sts	0x018F, r25
+						curr_y = loc[y];
+     fd8:	88 81       	ld	r24, Y
+     fda:	80 93 87 03 	sts	0x0387, r24
+     fde:	16 c0       	rjmp	.+44     	; 0x100c <__stack+0x70d>
+					}
+					else
+					{
+						curr_y = loc[y] + k*dice[!die_of_first_move];
+     fe0:	2a 2d       	mov	r18, r10
+     fe2:	3b 2d       	mov	r19, r11
+     fe4:	90 91 91 01 	lds	r25, 0x0191
+     fe8:	99 23       	and	r25, r25
+     fea:	11 f0       	breq	.+4      	; 0xff0 <__stack+0x6f1>
+     fec:	28 2d       	mov	r18, r8
+     fee:	39 2d       	mov	r19, r9
+     ff0:	f9 01       	movw	r30, r18
+     ff2:	e9 57       	subi	r30, 0x79	; 121
+     ff4:	fe 4f       	sbci	r31, 0xFE	; 254
+     ff6:	20 81       	ld	r18, Z
+     ff8:	98 81       	ld	r25, Y
+     ffa:	28 9f       	mul	r18, r24
+     ffc:	90 0d       	add	r25, r0
+     ffe:	11 24       	eor	r1, r1
+    1000:	90 93 87 03 	sts	0x0387, r25
+						curr_x = loc[x];
+    1004:	f8 01       	movw	r30, r16
+    1006:	80 81       	ld	r24, Z
+    1008:	80 93 8f 01 	sts	0x018F, r24
+					}
+					if (!grid[curr_x][curr_y].occupied			// Not already a piece there
+    100c:	80 91 8f 01 	lds	r24, 0x018F
+    1010:	60 91 87 03 	lds	r22, 0x0387
+    1014:	27 e0       	ldi	r18, 0x07	; 7
+    1016:	82 9f       	mul	r24, r18
+    1018:	f0 01       	movw	r30, r0
+    101a:	11 24       	eor	r1, r1
+    101c:	e6 0f       	add	r30, r22
+    101e:	f1 1d       	adc	r31, r1
+    1020:	ee 0f       	add	r30, r30
+    1022:	ff 1f       	adc	r31, r31
+    1024:	ee 0f       	add	r30, r30
+    1026:	ff 1f       	adc	r31, r31
+    1028:	ee 56       	subi	r30, 0x6E	; 110
+    102a:	fe 4f       	sbci	r31, 0xFE	; 254
+    102c:	90 81       	ld	r25, Z
+    102e:	91 11       	cpse	r25, r1
+    1030:	1a c0       	rjmp	.+52     	; 0x1066 <__stack+0x767>
+						&&	(curr_x >= 0 && curr_x < N_COLS)	// Is not out of bounds
+    1032:	87 30       	cpi	r24, 0x07	; 7
+    1034:	c0 f4       	brcc	.+48     	; 0x1066 <__stack+0x767>
+						&&	(curr_y >= 0 && curr_y < N_ROWS))
+    1036:	67 30       	cpi	r22, 0x07	; 7
+    1038:	b0 f4       	brcc	.+44     	; 0x1066 <__stack+0x767>
+					{
+						setColor( curr_x, curr_y, COLOR_READY);
+    103a:	20 e8       	ldi	r18, 0x80	; 128
+    103c:	30 e0       	ldi	r19, 0x00	; 0
+    103e:	a9 01       	movw	r20, r18
+    1040:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+						grid[curr_x][curr_y].placement_option = true;
+    1044:	e0 91 8f 01 	lds	r30, 0x018F
+    1048:	80 91 87 03 	lds	r24, 0x0387
+    104c:	97 e0       	ldi	r25, 0x07	; 7
+    104e:	e9 9f       	mul	r30, r25
+    1050:	f0 01       	movw	r30, r0
+    1052:	11 24       	eor	r1, r1
+    1054:	e8 0f       	add	r30, r24
+    1056:	f1 1d       	adc	r31, r1
+    1058:	ee 0f       	add	r30, r30
+    105a:	ff 1f       	adc	r31, r31
+    105c:	ee 0f       	add	r30, r30
+    105e:	ff 1f       	adc	r31, r31
+    1060:	ee 56       	subi	r30, 0x6E	; 110
+    1062:	fe 4f       	sbci	r31, 0xFE	; 254
+    1064:	72 82       	std	Z+2, r7	; 0x02
+				orig_loc[x] = loc[x];
+				orig_loc[y] = loc[y];
+				setColor(loc[x], loc[y], COLOR_BLANK); // blank the square that was lifted
+
+				// Illuminate possible options
+				for( k = -1; k<2; k += 2 ){
+    1066:	80 91 56 02 	lds	r24, 0x0256
+    106a:	90 91 57 02 	lds	r25, 0x0257
+    106e:	02 96       	adiw	r24, 0x02	; 2
+    1070:	90 93 57 02 	sts	0x0257, r25
+    1074:	80 93 56 02 	sts	0x0256, r24
+    1078:	82 30       	cpi	r24, 0x02	; 2
+    107a:	91 05       	cpc	r25, r1
+    107c:	0c f4       	brge	.+2      	; 0x1080 <__stack+0x781>
+    107e:	95 cf       	rjmp	.-214    	; 0xfaa <__stack+0x6ab>
+					{
+						setColor( curr_x, curr_y, COLOR_READY);
+						grid[curr_x][curr_y].placement_option = true;
+					}
+				}
+				curr_state = SECOND_MOVE_AFTER_PICK;
+    1080:	85 e0       	ldi	r24, 0x05	; 5
+    1082:	80 93 86 01 	sts	0x0186, r24
+				break;
+    1086:	da c1       	rjmp	.+948    	; 0x143c <__stack+0xb3d>
+
+
+			case SECOND_MOVE_AFTER_PICK						:
+				if(!change)
+    1088:	80 91 89 01 	lds	r24, 0x0189
+    108c:	88 23       	and	r24, r24
+    108e:	09 f4       	brne	.+2      	; 0x1092 <__stack+0x793>
+    1090:	d5 c1       	rjmp	.+938    	; 0x143c <__stack+0xb3d>
+				break; // No change, do nothing.
+				
+				// Player picked up another piece
+				if( !grid[loc[0]][loc[1]].occupied ){
+    1092:	d8 01       	movw	r26, r16
+    1094:	8c 91       	ld	r24, X
+    1096:	68 81       	ld	r22, Y
+    1098:	46 2f       	mov	r20, r22
+    109a:	50 e0       	ldi	r21, 0x00	; 0
+    109c:	28 2f       	mov	r18, r24
+    109e:	30 e0       	ldi	r19, 0x00	; 0
+    10a0:	fa 01       	movw	r30, r20
+    10a2:	b7 e0       	ldi	r27, 0x07	; 7
+    10a4:	8b 9f       	mul	r24, r27
+    10a6:	e0 0d       	add	r30, r0
+    10a8:	f1 1d       	adc	r31, r1
+    10aa:	11 24       	eor	r1, r1
+    10ac:	ee 0f       	add	r30, r30
+    10ae:	ff 1f       	adc	r31, r31
+    10b0:	ee 0f       	add	r30, r30
+    10b2:	ff 1f       	adc	r31, r31
+    10b4:	ee 56       	subi	r30, 0x6E	; 110
+    10b6:	fe 4f       	sbci	r31, 0xFE	; 254
+    10b8:	90 81       	ld	r25, Z
+    10ba:	91 11       	cpse	r25, r1
+    10bc:	0e c0       	rjmp	.+28     	; 0x10da <__stack+0x7db>
+					err_loc[x] = loc[x];
+    10be:	f6 01       	movw	r30, r12
+    10c0:	80 83       	st	Z, r24
+					err_loc[y] = loc[y];
+    10c2:	60 93 8d 01 	sts	0x018D, r22
+					setColor(loc[x],loc[y], COLOR_INVALID);
+    10c6:	20 e0       	ldi	r18, 0x00	; 0
+    10c8:	30 e0       	ldi	r19, 0x00	; 0
+    10ca:	40 ea       	ldi	r20, 0xA0	; 160
+    10cc:	50 e0       	ldi	r21, 0x00	; 0
+    10ce:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = INVALID_PICKED_SECOND_PIECE_IN_SECOND_MOVE;
+    10d2:	8a e0       	ldi	r24, 0x0A	; 10
+    10d4:	80 93 86 01 	sts	0x0186, r24
+					break;
+    10d8:	b1 c1       	rjmp	.+866    	; 0x143c <__stack+0xb3d>
+				}
+				// Player put the piece back in the same spot
+				else if ( loc[x] == orig_loc[x] && loc[y] == orig_loc[y] )
+    10da:	90 91 58 02 	lds	r25, 0x0258
+    10de:	89 13       	cpse	r24, r25
+    10e0:	f2 c1       	rjmp	.+996    	; 0x14c6 <__stack+0xbc7>
+    10e2:	90 91 59 02 	lds	r25, 0x0259
+    10e6:	69 13       	cpse	r22, r25
+    10e8:	69 c0       	rjmp	.+210    	; 0x11bc <__stack+0x8bd>
+				{
+					// Undo valid placements
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+    10ea:	10 92 ef 02 	sts	0x02EF, r1
+    10ee:	10 92 ee 02 	sts	0x02EE, r1
+    10f2:	10 92 8b 01 	sts	0x018B, r1
+    10f6:	10 92 8a 01 	sts	0x018A, r1
+    10fa:	60 e0       	ldi	r22, 0x00	; 0
+    10fc:	70 e0       	ldi	r23, 0x00	; 0
+						if (grid[i][j].placement_option)
+    10fe:	80 91 ee 02 	lds	r24, 0x02EE
+    1102:	90 91 ef 02 	lds	r25, 0x02EF
+    1106:	dc 01       	movw	r26, r24
+    1108:	aa 0f       	add	r26, r26
+    110a:	bb 1f       	adc	r27, r27
+    110c:	aa 0f       	add	r26, r26
+    110e:	bb 1f       	adc	r27, r27
+    1110:	aa 0f       	add	r26, r26
+    1112:	bb 1f       	adc	r27, r27
+    1114:	a8 1b       	sub	r26, r24
+    1116:	b9 0b       	sbc	r27, r25
+    1118:	a6 0f       	add	r26, r22
+    111a:	b7 1f       	adc	r27, r23
+    111c:	aa 0f       	add	r26, r26
+    111e:	bb 1f       	adc	r27, r27
+    1120:	aa 0f       	add	r26, r26
+    1122:	bb 1f       	adc	r27, r27
+    1124:	ae 56       	subi	r26, 0x6E	; 110
+    1126:	be 4f       	sbci	r27, 0xFE	; 254
+    1128:	12 96       	adiw	r26, 0x02	; 2
+    112a:	2c 91       	ld	r18, X
+    112c:	22 23       	and	r18, r18
+    112e:	f9 f0       	breq	.+62     	; 0x116e <__stack+0x86f>
+						{
+							setColor(i,j, COLOR_BLANK);
+    1130:	20 e0       	ldi	r18, 0x00	; 0
+    1132:	30 e0       	ldi	r19, 0x00	; 0
+    1134:	a9 01       	movw	r20, r18
+    1136:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+							grid[i][j].placement_option = false;
+    113a:	80 91 ee 02 	lds	r24, 0x02EE
+    113e:	90 91 ef 02 	lds	r25, 0x02EF
+    1142:	fc 01       	movw	r30, r24
+    1144:	ee 0f       	add	r30, r30
+    1146:	ff 1f       	adc	r31, r31
+    1148:	ee 0f       	add	r30, r30
+    114a:	ff 1f       	adc	r31, r31
+    114c:	ee 0f       	add	r30, r30
+    114e:	ff 1f       	adc	r31, r31
+    1150:	e8 1b       	sub	r30, r24
+    1152:	f9 0b       	sbc	r31, r25
+    1154:	80 91 8a 01 	lds	r24, 0x018A
+    1158:	90 91 8b 01 	lds	r25, 0x018B
+    115c:	e8 0f       	add	r30, r24
+    115e:	f9 1f       	adc	r31, r25
+    1160:	ee 0f       	add	r30, r30
+    1162:	ff 1f       	adc	r31, r31
+    1164:	ee 0f       	add	r30, r30
+    1166:	ff 1f       	adc	r31, r31
+    1168:	ee 56       	subi	r30, 0x6E	; 110
+    116a:	fe 4f       	sbci	r31, 0xFE	; 254
+    116c:	12 82       	std	Z+2, r1	; 0x02
+				}
+				// Player put the piece back in the same spot
+				else if ( loc[x] == orig_loc[x] && loc[y] == orig_loc[y] )
+				{
+					// Undo valid placements
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+    116e:	80 91 8a 01 	lds	r24, 0x018A
+    1172:	90 91 8b 01 	lds	r25, 0x018B
+    1176:	01 96       	adiw	r24, 0x01	; 1
+    1178:	90 93 8b 01 	sts	0x018B, r25
+    117c:	80 93 8a 01 	sts	0x018A, r24
+    1180:	87 30       	cpi	r24, 0x07	; 7
+    1182:	91 05       	cpc	r25, r1
+    1184:	14 f4       	brge	.+4      	; 0x118a <__stack+0x88b>
+    1186:	bc 01       	movw	r22, r24
+    1188:	ba cf       	rjmp	.-140    	; 0x10fe <__stack+0x7ff>
+    118a:	80 91 ee 02 	lds	r24, 0x02EE
+    118e:	90 91 ef 02 	lds	r25, 0x02EF
+    1192:	01 96       	adiw	r24, 0x01	; 1
+    1194:	90 93 ef 02 	sts	0x02EF, r25
+    1198:	80 93 ee 02 	sts	0x02EE, r24
+    119c:	07 97       	sbiw	r24, 0x07	; 7
+    119e:	0c f4       	brge	.+2      	; 0x11a2 <__stack+0x8a3>
+    11a0:	a8 cf       	rjmp	.-176    	; 0x10f2 <__stack+0x7f3>
+							setColor(i,j, COLOR_BLANK);
+							grid[i][j].placement_option = false;
+						}
+					}}
+					// Set placed piece back to occupied
+					setColor(loc[x],loc[y], COLOR_OCCUPIED);
+    11a2:	2f ef       	ldi	r18, 0xFF	; 255
+    11a4:	3f ef       	ldi	r19, 0xFF	; 255
+    11a6:	40 e0       	ldi	r20, 0x00	; 0
+    11a8:	50 e0       	ldi	r21, 0x00	; 0
+    11aa:	68 81       	ld	r22, Y
+    11ac:	d8 01       	movw	r26, r16
+    11ae:	8c 91       	ld	r24, X
+    11b0:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = SECOND_MOVE_BEFORE_PICK;
+    11b4:	84 e0       	ldi	r24, 0x04	; 4
+    11b6:	80 93 86 01 	sts	0x0186, r24
+					break;
+    11ba:	40 c1       	rjmp	.+640    	; 0x143c <__stack+0xb3d>
+				}
+				// Placed in invalid location
+				else if ( !grid[loc[0]][loc[1]].placement_option )
+    11bc:	f9 01       	movw	r30, r18
+    11be:	ee 0f       	add	r30, r30
+    11c0:	ff 1f       	adc	r31, r31
+    11c2:	ee 0f       	add	r30, r30
+    11c4:	ff 1f       	adc	r31, r31
+    11c6:	ee 0f       	add	r30, r30
+    11c8:	ff 1f       	adc	r31, r31
+    11ca:	df 01       	movw	r26, r30
+    11cc:	a2 1b       	sub	r26, r18
+    11ce:	b3 0b       	sbc	r27, r19
+    11d0:	4a 0f       	add	r20, r26
+    11d2:	5b 1f       	adc	r21, r27
+    11d4:	fa 01       	movw	r30, r20
+    11d6:	ee 0f       	add	r30, r30
+    11d8:	ff 1f       	adc	r31, r31
+    11da:	ee 0f       	add	r30, r30
+    11dc:	ff 1f       	adc	r31, r31
+    11de:	ee 56       	subi	r30, 0x6E	; 110
+    11e0:	fe 4f       	sbci	r31, 0xFE	; 254
+    11e2:	92 81       	ldd	r25, Z+2	; 0x02
+    11e4:	91 11       	cpse	r25, r1
+    11e6:	0e c0       	rjmp	.+28     	; 0x1204 <__stack+0x905>
+				{
+					err_loc[x] = loc[x];
+    11e8:	f6 01       	movw	r30, r12
+    11ea:	80 83       	st	Z, r24
+					err_loc[y] = loc[y];
+    11ec:	60 93 8d 01 	sts	0x018D, r22
+					setColor(loc[x],loc[y], COLOR_INVALID);
+    11f0:	20 e0       	ldi	r18, 0x00	; 0
+    11f2:	30 e0       	ldi	r19, 0x00	; 0
+    11f4:	40 ea       	ldi	r20, 0xA0	; 160
+    11f6:	50 e0       	ldi	r21, 0x00	; 0
+    11f8:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = INVALID_PLACEMENT_IN_SECOND_MOVE;
+    11fc:	89 e0       	ldi	r24, 0x09	; 9
+    11fe:	80 93 86 01 	sts	0x0186, r24
+					break;
+    1202:	1c c1       	rjmp	.+568    	; 0x143c <__stack+0xb3d>
+				}
+				// Placed in valid location
+				else if ( grid[loc[0]][loc[1]].placement_option ){
+					if (isAligned()){
+    1204:	0e 94 da 02 	call	0x5b4	; 0x5b4 <isAligned>
+    1208:	88 23       	and	r24, r24
+    120a:	29 f0       	breq	.+10     	; 0x1216 <__stack+0x917>
+						winAnimation();
+    120c:	0e 94 f7 01 	call	0x3ee	; 0x3ee <winAnimation>
+						reset();
+    1210:	0e 94 38 04 	call	0x870	; 0x870 <reset>
+						break;
+    1214:	13 c1       	rjmp	.+550    	; 0x143c <__stack+0xb3d>
+					}
+
+					// Undo valid placements
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+    1216:	10 92 ef 02 	sts	0x02EF, r1
+    121a:	10 92 ee 02 	sts	0x02EE, r1
+    121e:	10 92 8b 01 	sts	0x018B, r1
+    1222:	10 92 8a 01 	sts	0x018A, r1
+    1226:	60 e0       	ldi	r22, 0x00	; 0
+    1228:	70 e0       	ldi	r23, 0x00	; 0
+						if (grid[i][j].placement_option)
+    122a:	80 91 ee 02 	lds	r24, 0x02EE
+    122e:	90 91 ef 02 	lds	r25, 0x02EF
+    1232:	fc 01       	movw	r30, r24
+    1234:	ee 0f       	add	r30, r30
+    1236:	ff 1f       	adc	r31, r31
+    1238:	ee 0f       	add	r30, r30
+    123a:	ff 1f       	adc	r31, r31
+    123c:	ee 0f       	add	r30, r30
+    123e:	ff 1f       	adc	r31, r31
+    1240:	e8 1b       	sub	r30, r24
+    1242:	f9 0b       	sbc	r31, r25
+    1244:	e6 0f       	add	r30, r22
+    1246:	f7 1f       	adc	r31, r23
+    1248:	ee 0f       	add	r30, r30
+    124a:	ff 1f       	adc	r31, r31
+    124c:	ee 0f       	add	r30, r30
+    124e:	ff 1f       	adc	r31, r31
+    1250:	ee 56       	subi	r30, 0x6E	; 110
+    1252:	fe 4f       	sbci	r31, 0xFE	; 254
+    1254:	22 81       	ldd	r18, Z+2	; 0x02
+    1256:	22 23       	and	r18, r18
+    1258:	f9 f0       	breq	.+62     	; 0x1298 <__stack+0x999>
+						{
+							setColor(i,j, COLOR_BLANK);
+    125a:	20 e0       	ldi	r18, 0x00	; 0
+    125c:	30 e0       	ldi	r19, 0x00	; 0
+    125e:	a9 01       	movw	r20, r18
+    1260:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+							grid[i][j].placement_option = false;
+    1264:	80 91 ee 02 	lds	r24, 0x02EE
+    1268:	90 91 ef 02 	lds	r25, 0x02EF
+    126c:	fc 01       	movw	r30, r24
+    126e:	ee 0f       	add	r30, r30
+    1270:	ff 1f       	adc	r31, r31
+    1272:	ee 0f       	add	r30, r30
+    1274:	ff 1f       	adc	r31, r31
+    1276:	ee 0f       	add	r30, r30
+    1278:	ff 1f       	adc	r31, r31
+    127a:	e8 1b       	sub	r30, r24
+    127c:	f9 0b       	sbc	r31, r25
+    127e:	80 91 8a 01 	lds	r24, 0x018A
+    1282:	90 91 8b 01 	lds	r25, 0x018B
+    1286:	e8 0f       	add	r30, r24
+    1288:	f9 1f       	adc	r31, r25
+    128a:	ee 0f       	add	r30, r30
+    128c:	ff 1f       	adc	r31, r31
+    128e:	ee 0f       	add	r30, r30
+    1290:	ff 1f       	adc	r31, r31
+    1292:	ee 56       	subi	r30, 0x6E	; 110
+    1294:	fe 4f       	sbci	r31, 0xFE	; 254
+    1296:	12 82       	std	Z+2, r1	; 0x02
+						reset();
+						break;
+					}
+
+					// Undo valid placements
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+    1298:	60 91 8a 01 	lds	r22, 0x018A
+    129c:	70 91 8b 01 	lds	r23, 0x018B
+    12a0:	6f 5f       	subi	r22, 0xFF	; 255
+    12a2:	7f 4f       	sbci	r23, 0xFF	; 255
+    12a4:	70 93 8b 01 	sts	0x018B, r23
+    12a8:	60 93 8a 01 	sts	0x018A, r22
+    12ac:	67 30       	cpi	r22, 0x07	; 7
+    12ae:	71 05       	cpc	r23, r1
+    12b0:	0c f4       	brge	.+2      	; 0x12b4 <__stack+0x9b5>
+    12b2:	bb cf       	rjmp	.-138    	; 0x122a <__stack+0x92b>
+    12b4:	80 91 ee 02 	lds	r24, 0x02EE
+    12b8:	90 91 ef 02 	lds	r25, 0x02EF
+    12bc:	01 96       	adiw	r24, 0x01	; 1
+    12be:	90 93 ef 02 	sts	0x02EF, r25
+    12c2:	80 93 ee 02 	sts	0x02EE, r24
+    12c6:	07 97       	sbiw	r24, 0x07	; 7
+    12c8:	0c f4       	brge	.+2      	; 0x12cc <__stack+0x9cd>
+    12ca:	a9 cf       	rjmp	.-174    	; 0x121e <__stack+0x91f>
+							setColor(i,j, COLOR_BLANK);
+							grid[i][j].placement_option = false;
+						}
+					}}
+					// Set placed piece back to occupied
+					setColor(loc[x],loc[y], COLOR_OCCUPIED);
+    12cc:	2f ef       	ldi	r18, 0xFF	; 255
+    12ce:	3f ef       	ldi	r19, 0xFF	; 255
+    12d0:	40 e0       	ldi	r20, 0x00	; 0
+    12d2:	50 e0       	ldi	r21, 0x00	; 0
+    12d4:	68 81       	ld	r22, Y
+    12d6:	d8 01       	movw	r26, r16
+    12d8:	8c 91       	ld	r24, X
+    12da:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = ROLL_DICE;
+    12de:	81 e0       	ldi	r24, 0x01	; 1
+    12e0:	80 93 86 01 	sts	0x0186, r24
+					break;
+    12e4:	ab c0       	rjmp	.+342    	; 0x143c <__stack+0xb3d>
+			case INVALID_PICKED_A_PIECE_BEFORE_ROLL			:
+				break;
+
+
+			case INVALID_PLACEMENT_IN_FIRST_MOVE			:
+				if(!change)
+    12e6:	80 91 89 01 	lds	r24, 0x0189
+    12ea:	88 23       	and	r24, r24
+    12ec:	09 f4       	brne	.+2      	; 0x12f0 <__stack+0x9f1>
+    12ee:	a6 c0       	rjmp	.+332    	; 0x143c <__stack+0xb3d>
+				break; // No change, do nothing.
+
+				// Player picked up the invalid piece, continue the game
+				if (loc[x] == err_loc[x] && loc[y] == err_loc[y])
+    12f0:	f8 01       	movw	r30, r16
+    12f2:	80 81       	ld	r24, Z
+    12f4:	d6 01       	movw	r26, r12
+    12f6:	9c 91       	ld	r25, X
+    12f8:	89 13       	cpse	r24, r25
+    12fa:	0e c0       	rjmp	.+28     	; 0x1318 <__stack+0xa19>
+    12fc:	68 81       	ld	r22, Y
+    12fe:	90 91 8d 01 	lds	r25, 0x018D
+    1302:	69 13       	cpse	r22, r25
+    1304:	09 c0       	rjmp	.+18     	; 0x1318 <__stack+0xa19>
+				{
+					setColor(loc[x], loc[y], COLOR_BLANK);
+    1306:	20 e0       	ldi	r18, 0x00	; 0
+    1308:	30 e0       	ldi	r19, 0x00	; 0
+    130a:	a9 01       	movw	r20, r18
+    130c:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = FIRST_MOVE_AFTER_PICK;
+    1310:	83 e0       	ldi	r24, 0x03	; 3
+    1312:	80 93 86 01 	sts	0x0186, r24
+					break;
+    1316:	92 c0       	rjmp	.+292    	; 0x143c <__stack+0xb3d>
+				}
+				else reset();
+    1318:	0e 94 38 04 	call	0x870	; 0x870 <reset>
+				break;
+    131c:	8f c0       	rjmp	.+286    	; 0x143c <__stack+0xb3d>
+
+
+			case INVALID_PICKED_SECOND_PIECE_IN_FIRST_MOVE	:
+				if(!change)
+    131e:	80 91 89 01 	lds	r24, 0x0189
+    1322:	88 23       	and	r24, r24
+    1324:	09 f4       	brne	.+2      	; 0x1328 <__stack+0xa29>
+    1326:	8a c0       	rjmp	.+276    	; 0x143c <__stack+0xb3d>
+					break; // No change, do nothing.
+				
+				// Player picked up another piece, just restart the game
+				if( !grid[loc[0]][loc[1]].occupied ){
+    1328:	f8 01       	movw	r30, r16
+    132a:	80 81       	ld	r24, Z
+    132c:	68 81       	ld	r22, Y
+    132e:	27 e0       	ldi	r18, 0x07	; 7
+    1330:	82 9f       	mul	r24, r18
+    1332:	f0 01       	movw	r30, r0
+    1334:	11 24       	eor	r1, r1
+    1336:	e6 0f       	add	r30, r22
+    1338:	f1 1d       	adc	r31, r1
+    133a:	ee 0f       	add	r30, r30
+    133c:	ff 1f       	adc	r31, r31
+    133e:	ee 0f       	add	r30, r30
+    1340:	ff 1f       	adc	r31, r31
+    1342:	ee 56       	subi	r30, 0x6E	; 110
+    1344:	fe 4f       	sbci	r31, 0xFE	; 254
+    1346:	90 81       	ld	r25, Z
+    1348:	91 11       	cpse	r25, r1
+    134a:	03 c0       	rjmp	.+6      	; 0x1352 <__stack+0xa53>
+					reset();
+    134c:	0e 94 38 04 	call	0x870	; 0x870 <reset>
+					break;
+    1350:	75 c0       	rjmp	.+234    	; 0x143c <__stack+0xb3d>
+				}
+
+				// Player put the piece back, continue the game
+				else if (loc[x] == err_loc[x] && loc[y] == err_loc[y])
+    1352:	d6 01       	movw	r26, r12
+    1354:	9c 91       	ld	r25, X
+    1356:	89 13       	cpse	r24, r25
+    1358:	71 c0       	rjmp	.+226    	; 0x143c <__stack+0xb3d>
+    135a:	90 91 8d 01 	lds	r25, 0x018D
+    135e:	69 13       	cpse	r22, r25
+    1360:	6d c0       	rjmp	.+218    	; 0x143c <__stack+0xb3d>
+				{
+					setColor(loc[x], loc[y], COLOR_OCCUPIED);
+    1362:	2f ef       	ldi	r18, 0xFF	; 255
+    1364:	3f ef       	ldi	r19, 0xFF	; 255
+    1366:	40 e0       	ldi	r20, 0x00	; 0
+    1368:	50 e0       	ldi	r21, 0x00	; 0
+    136a:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = FIRST_MOVE_AFTER_PICK;
+    136e:	83 e0       	ldi	r24, 0x03	; 3
+    1370:	80 93 86 01 	sts	0x0186, r24
+					break;
+    1374:	63 c0       	rjmp	.+198    	; 0x143c <__stack+0xb3d>
+				}
+				break;
+
+
+			case INVALID_PLACEMENT_IN_SECOND_MOVE			:
+				if(!change)
+    1376:	80 91 89 01 	lds	r24, 0x0189
+    137a:	88 23       	and	r24, r24
+    137c:	09 f4       	brne	.+2      	; 0x1380 <__stack+0xa81>
+    137e:	5e c0       	rjmp	.+188    	; 0x143c <__stack+0xb3d>
+				break; // No change, do nothing.
+
+				// Player picked up the invalid piece, continue the game
+				if (loc[x] == err_loc[x] && loc[y] == err_loc[y])
+    1380:	f8 01       	movw	r30, r16
+    1382:	80 81       	ld	r24, Z
+    1384:	d6 01       	movw	r26, r12
+    1386:	9c 91       	ld	r25, X
+    1388:	89 13       	cpse	r24, r25
+    138a:	0e c0       	rjmp	.+28     	; 0x13a8 <__stack+0xaa9>
+    138c:	68 81       	ld	r22, Y
+    138e:	90 91 8d 01 	lds	r25, 0x018D
+    1392:	69 13       	cpse	r22, r25
+    1394:	09 c0       	rjmp	.+18     	; 0x13a8 <__stack+0xaa9>
+				{
+					setColor(loc[x], loc[y], COLOR_BLANK);
+    1396:	20 e0       	ldi	r18, 0x00	; 0
+    1398:	30 e0       	ldi	r19, 0x00	; 0
+    139a:	a9 01       	movw	r20, r18
+    139c:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = SECOND_MOVE_AFTER_PICK;
+    13a0:	85 e0       	ldi	r24, 0x05	; 5
+    13a2:	80 93 86 01 	sts	0x0186, r24
+					break;
+    13a6:	4a c0       	rjmp	.+148    	; 0x143c <__stack+0xb3d>
+				}
+				else reset();
+    13a8:	0e 94 38 04 	call	0x870	; 0x870 <reset>
+				break;
+    13ac:	47 c0       	rjmp	.+142    	; 0x143c <__stack+0xb3d>
+
+
+			case INVALID_PICKED_SECOND_PIECE_IN_SECOND_MOVE	:
+				if(!change)
+    13ae:	80 91 89 01 	lds	r24, 0x0189
+    13b2:	88 23       	and	r24, r24
+    13b4:	09 f4       	brne	.+2      	; 0x13b8 <__stack+0xab9>
+    13b6:	42 c0       	rjmp	.+132    	; 0x143c <__stack+0xb3d>
+				break; // No change, do nothing.
+				
+				// Player picked up another piece, just restart the game
+				if( !grid[loc[0]][loc[1]].occupied ){
+    13b8:	f8 01       	movw	r30, r16
+    13ba:	80 81       	ld	r24, Z
+    13bc:	68 81       	ld	r22, Y
+    13be:	27 e0       	ldi	r18, 0x07	; 7
+    13c0:	82 9f       	mul	r24, r18
+    13c2:	f0 01       	movw	r30, r0
+    13c4:	11 24       	eor	r1, r1
+    13c6:	e6 0f       	add	r30, r22
+    13c8:	f1 1d       	adc	r31, r1
+    13ca:	ee 0f       	add	r30, r30
+    13cc:	ff 1f       	adc	r31, r31
+    13ce:	ee 0f       	add	r30, r30
+    13d0:	ff 1f       	adc	r31, r31
+    13d2:	ee 56       	subi	r30, 0x6E	; 110
+    13d4:	fe 4f       	sbci	r31, 0xFE	; 254
+    13d6:	90 81       	ld	r25, Z
+    13d8:	91 11       	cpse	r25, r1
+    13da:	03 c0       	rjmp	.+6      	; 0x13e2 <__stack+0xae3>
+					reset();
+    13dc:	0e 94 38 04 	call	0x870	; 0x870 <reset>
+					break;
+    13e0:	2d c0       	rjmp	.+90     	; 0x143c <__stack+0xb3d>
+				}
+
+				// Player put the piece back, continue the game
+				else if (loc[x] == err_loc[x] && loc[y] == err_loc[y])
+    13e2:	d6 01       	movw	r26, r12
+    13e4:	9c 91       	ld	r25, X
+    13e6:	89 13       	cpse	r24, r25
+    13e8:	29 c0       	rjmp	.+82     	; 0x143c <__stack+0xb3d>
+    13ea:	90 91 8d 01 	lds	r25, 0x018D
+    13ee:	69 13       	cpse	r22, r25
+    13f0:	25 c0       	rjmp	.+74     	; 0x143c <__stack+0xb3d>
+				{
+					setColor(loc[x], loc[y], COLOR_OCCUPIED);
+    13f2:	2f ef       	ldi	r18, 0xFF	; 255
+    13f4:	3f ef       	ldi	r19, 0xFF	; 255
+    13f6:	40 e0       	ldi	r20, 0x00	; 0
+    13f8:	50 e0       	ldi	r21, 0x00	; 0
+    13fa:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = SECOND_MOVE_AFTER_PICK;
+    13fe:	85 e0       	ldi	r24, 0x05	; 5
+    1400:	80 93 86 01 	sts	0x0186, r24
+					break;
+    1404:	1b c0       	rjmp	.+54     	; 0x143c <__stack+0xb3d>
+				}
+				break;
+
+
+			case INVALID_PICKED_WRONG_PIECE_IN_SECOND_MOVE	:
+				if(!change)
+    1406:	80 91 89 01 	lds	r24, 0x0189
+    140a:	88 23       	and	r24, r24
+    140c:	b9 f0       	breq	.+46     	; 0x143c <__stack+0xb3d>
+				break; // No change, do nothing.
+
+				// Player picked up the invalid piece, continue the game
+				if (loc[x] == err_loc[x] && loc[y] == err_loc[y])
+    140e:	f8 01       	movw	r30, r16
+    1410:	80 81       	ld	r24, Z
+    1412:	d6 01       	movw	r26, r12
+    1414:	9c 91       	ld	r25, X
+    1416:	89 13       	cpse	r24, r25
+    1418:	0f c0       	rjmp	.+30     	; 0x1438 <__stack+0xb39>
+    141a:	68 81       	ld	r22, Y
+    141c:	90 91 8d 01 	lds	r25, 0x018D
+    1420:	69 13       	cpse	r22, r25
+    1422:	0a c0       	rjmp	.+20     	; 0x1438 <__stack+0xb39>
+				{
+					setColor(loc[x], loc[y], COLOR_OCCUPIED);
+    1424:	2f ef       	ldi	r18, 0xFF	; 255
+    1426:	3f ef       	ldi	r19, 0xFF	; 255
+    1428:	40 e0       	ldi	r20, 0x00	; 0
+    142a:	50 e0       	ldi	r21, 0x00	; 0
+    142c:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+					curr_state = SECOND_MOVE_BEFORE_PICK;
+    1430:	84 e0       	ldi	r24, 0x04	; 4
+    1432:	80 93 86 01 	sts	0x0186, r24
+					break;
+    1436:	02 c0       	rjmp	.+4      	; 0x143c <__stack+0xb3d>
+				}
+				else reset();
+    1438:	0e 94 38 04 	call	0x870	; 0x870 <reset>
+				break;
+		}
+		//setAllColorsFromGrid();
+		ws2812_setleds(led,NUM_LEDS);
+    143c:	61 e3       	ldi	r22, 0x31	; 49
+    143e:	70 e0       	ldi	r23, 0x00	; 0
+    1440:	8b e5       	ldi	r24, 0x5B	; 91
+    1442:	92 e0       	ldi	r25, 0x02	; 2
+    1444:	0e 94 5f 00 	call	0xbe	; 0xbe <ws2812_setleds>
+		if (change) _delay_ms(50); // Debounce
+    1448:	80 91 89 01 	lds	r24, 0x0189
+    144c:	88 23       	and	r24, r24
+    144e:	09 f4       	brne	.+2      	; 0x1452 <__stack+0xb53>
+    1450:	4d ca       	rjmp	.-2918   	; 0x8ec <main+0x72>
+    1452:	bf e7       	ldi	r27, 0x7F	; 127
+    1454:	e8 e3       	ldi	r30, 0x38	; 56
+    1456:	f1 e0       	ldi	r31, 0x01	; 1
+    1458:	b1 50       	subi	r27, 0x01	; 1
+    145a:	e0 40       	sbci	r30, 0x00	; 0
+    145c:	f0 40       	sbci	r31, 0x00	; 0
+    145e:	e1 f7       	brne	.-8      	; 0x1458 <__stack+0xb59>
+    1460:	00 c0       	rjmp	.+0      	; 0x1462 <__stack+0xb63>
+    1462:	00 00       	nop
+    1464:	43 ca       	rjmp	.-2938   	; 0x8ec <main+0x72>
+					setColor(loc[x],loc[y], COLOR_OCCUPIED);
+					curr_state = FIRST_MOVE_BEFORE_PICK;
+					break;
+				}
+					// Placed in invalid location
+				else if ( !grid[loc[0]][loc[1]].placement_option )
+    1466:	f9 01       	movw	r30, r18
+    1468:	ee 0f       	add	r30, r30
+    146a:	ff 1f       	adc	r31, r31
+    146c:	ee 0f       	add	r30, r30
+    146e:	ff 1f       	adc	r31, r31
+    1470:	ee 0f       	add	r30, r30
+    1472:	ff 1f       	adc	r31, r31
+    1474:	df 01       	movw	r26, r30
+    1476:	a2 1b       	sub	r26, r18
+    1478:	b3 0b       	sbc	r27, r19
+    147a:	4a 0f       	add	r20, r26
+    147c:	5b 1f       	adc	r21, r27
+    147e:	fa 01       	movw	r30, r20
+    1480:	ee 0f       	add	r30, r30
+    1482:	ff 1f       	adc	r31, r31
+    1484:	ee 0f       	add	r30, r30
+    1486:	ff 1f       	adc	r31, r31
+    1488:	ee 56       	subi	r30, 0x6E	; 110
+    148a:	fe 4f       	sbci	r31, 0xFE	; 254
+    148c:	92 81       	ldd	r25, Z+2	; 0x02
+    148e:	91 11       	cpse	r25, r1
+    1490:	c5 cc       	rjmp	.-1654   	; 0xe1c <__stack+0x51d>
+    1492:	b6 cc       	rjmp	.-1684   	; 0xe00 <__stack+0x501>
+					curr_state = INVALID_PICKED_WRONG_PIECE_IN_SECOND_MOVE;
+					break;
+				}
+
+				// Save the square that was lifted
+				orig_loc[x] = loc[x];
+    1494:	80 93 58 02 	sts	0x0258, r24
+				orig_loc[y] = loc[y];
+    1498:	68 81       	ld	r22, Y
+    149a:	60 93 59 02 	sts	0x0259, r22
+				setColor(loc[x], loc[y], COLOR_BLANK); // blank the square that was lifted
+    149e:	20 e0       	ldi	r18, 0x00	; 0
+    14a0:	30 e0       	ldi	r19, 0x00	; 0
+    14a2:	a9 01       	movw	r20, r18
+    14a4:	0e 94 98 00 	call	0x130	; 0x130 <setColor>
+
+				// Illuminate possible options
+				for( k = -1; k<2; k += 2 ){
+    14a8:	8f ef       	ldi	r24, 0xFF	; 255
+    14aa:	9f ef       	ldi	r25, 0xFF	; 255
+    14ac:	90 93 57 02 	sts	0x0257, r25
+    14b0:	80 93 56 02 	sts	0x0256, r24
+						winAnimation();
+						reset();
+						break;
+					}
+					// Undo valid placements
+					for(i=0;i<N_COLS;i++){for(j=0;j<N_ROWS;j++){
+    14b4:	8f ef       	ldi	r24, 0xFF	; 255
+						curr_x = loc[x] + k*dice[!die_of_first_move];
+						curr_y = loc[y];
+					}
+					else
+					{
+						curr_y = loc[y] + k*dice[!die_of_first_move];
+    14b6:	aa 24       	eor	r10, r10
+    14b8:	a3 94       	inc	r10
+    14ba:	b1 2c       	mov	r11, r1
+    14bc:	81 2c       	mov	r8, r1
+    14be:	91 2c       	mov	r9, r1
+					if (!grid[curr_x][curr_y].occupied			// Not already a piece there
+						&&	(curr_x >= 0 && curr_x < N_COLS)	// Is not out of bounds
+						&&	(curr_y >= 0 && curr_y < N_ROWS))
+					{
+						setColor( curr_x, curr_y, COLOR_READY);
+						grid[curr_x][curr_y].placement_option = true;
+    14c0:	77 24       	eor	r7, r7
+    14c2:	73 94       	inc	r7
+    14c4:	72 cd       	rjmp	.-1308   	; 0xfaa <__stack+0x6ab>
+					setColor(loc[x],loc[y], COLOR_OCCUPIED);
+					curr_state = SECOND_MOVE_BEFORE_PICK;
+					break;
+				}
+				// Placed in invalid location
+				else if ( !grid[loc[0]][loc[1]].placement_option )
+    14c6:	f9 01       	movw	r30, r18
+    14c8:	ee 0f       	add	r30, r30
+    14ca:	ff 1f       	adc	r31, r31
+    14cc:	ee 0f       	add	r30, r30
+    14ce:	ff 1f       	adc	r31, r31
+    14d0:	ee 0f       	add	r30, r30
+    14d2:	ff 1f       	adc	r31, r31
+    14d4:	df 01       	movw	r26, r30
+    14d6:	a2 1b       	sub	r26, r18
+    14d8:	b3 0b       	sbc	r27, r19
+    14da:	4a 0f       	add	r20, r26
+    14dc:	5b 1f       	adc	r21, r27
+    14de:	fa 01       	movw	r30, r20
+    14e0:	ee 0f       	add	r30, r30
+    14e2:	ff 1f       	adc	r31, r31
+    14e4:	ee 0f       	add	r30, r30
+    14e6:	ff 1f       	adc	r31, r31
+    14e8:	ee 56       	subi	r30, 0x6E	; 110
+    14ea:	fe 4f       	sbci	r31, 0xFE	; 254
+    14ec:	92 81       	ldd	r25, Z+2	; 0x02
+    14ee:	91 11       	cpse	r25, r1
+    14f0:	89 ce       	rjmp	.-750    	; 0x1204 <__stack+0x905>
+    14f2:	7a ce       	rjmp	.-780    	; 0x11e8 <__stack+0x8e9>
+
+000014f4 <board_init>:
+#include <asf.h>
+#include <board.h>
+#include <conf_board.h>
+
+void board_init(void)
+{
+    14f4:	08 95       	ret
+
+000014f6 <__divmodhi4>:
+    14f6:	97 fb       	bst	r25, 7
+    14f8:	07 2e       	mov	r0, r23
+    14fa:	16 f4       	brtc	.+4      	; 0x1500 <__divmodhi4+0xa>
+    14fc:	00 94       	com	r0
+    14fe:	07 d0       	rcall	.+14     	; 0x150e <__divmodhi4_neg1>
+    1500:	77 fd       	sbrc	r23, 7
+    1502:	09 d0       	rcall	.+18     	; 0x1516 <__divmodhi4_neg2>
+    1504:	0e 94 95 0a 	call	0x152a	; 0x152a <__udivmodhi4>
+    1508:	07 fc       	sbrc	r0, 7
+    150a:	05 d0       	rcall	.+10     	; 0x1516 <__divmodhi4_neg2>
+    150c:	3e f4       	brtc	.+14     	; 0x151c <__divmodhi4_exit>
+
+0000150e <__divmodhi4_neg1>:
+    150e:	90 95       	com	r25
+    1510:	81 95       	neg	r24
+    1512:	9f 4f       	sbci	r25, 0xFF	; 255
+    1514:	08 95       	ret
+
+00001516 <__divmodhi4_neg2>:
+    1516:	70 95       	com	r23
+    1518:	61 95       	neg	r22
+    151a:	7f 4f       	sbci	r23, 0xFF	; 255
+
+0000151c <__divmodhi4_exit>:
+    151c:	08 95       	ret
+
+0000151e <__tablejump2__>:
+    151e:	ee 0f       	add	r30, r30
+    1520:	ff 1f       	adc	r31, r31
+
+00001522 <__tablejump__>:
+    1522:	05 90       	lpm	r0, Z+
+    1524:	f4 91       	lpm	r31, Z
+    1526:	e0 2d       	mov	r30, r0
+    1528:	09 94       	ijmp
+
+0000152a <__udivmodhi4>:
+    152a:	aa 1b       	sub	r26, r26
+    152c:	bb 1b       	sub	r27, r27
+    152e:	51 e1       	ldi	r21, 0x11	; 17
+    1530:	07 c0       	rjmp	.+14     	; 0x1540 <__udivmodhi4_ep>
+
+00001532 <__udivmodhi4_loop>:
+    1532:	aa 1f       	adc	r26, r26
+    1534:	bb 1f       	adc	r27, r27
+    1536:	a6 17       	cp	r26, r22
+    1538:	b7 07       	cpc	r27, r23
+    153a:	10 f0       	brcs	.+4      	; 0x1540 <__udivmodhi4_ep>
+    153c:	a6 1b       	sub	r26, r22
+    153e:	b7 0b       	sbc	r27, r23
+
+00001540 <__udivmodhi4_ep>:
+    1540:	88 1f       	adc	r24, r24
+    1542:	99 1f       	adc	r25, r25
+    1544:	5a 95       	dec	r21
+    1546:	a9 f7       	brne	.-22     	; 0x1532 <__udivmodhi4_loop>
+    1548:	80 95       	com	r24
+    154a:	90 95       	com	r25
+    154c:	bc 01       	movw	r22, r24
+    154e:	cd 01       	movw	r24, r26
+    1550:	08 95       	ret
+
+00001552 <do_rand>:
+    1552:	8f 92       	push	r8
+    1554:	9f 92       	push	r9
+    1556:	af 92       	push	r10
+    1558:	bf 92       	push	r11
+    155a:	cf 92       	push	r12
+    155c:	df 92       	push	r13
+    155e:	ef 92       	push	r14
+    1560:	ff 92       	push	r15
+    1562:	cf 93       	push	r28
+    1564:	df 93       	push	r29
+    1566:	ec 01       	movw	r28, r24
+    1568:	68 81       	ld	r22, Y
+    156a:	79 81       	ldd	r23, Y+1	; 0x01
+    156c:	8a 81       	ldd	r24, Y+2	; 0x02
+    156e:	9b 81       	ldd	r25, Y+3	; 0x03
+    1570:	61 15       	cp	r22, r1
+    1572:	71 05       	cpc	r23, r1
+    1574:	81 05       	cpc	r24, r1
+    1576:	91 05       	cpc	r25, r1
+    1578:	21 f4       	brne	.+8      	; 0x1582 <do_rand+0x30>
+    157a:	64 e2       	ldi	r22, 0x24	; 36
+    157c:	79 ed       	ldi	r23, 0xD9	; 217
+    157e:	8b e5       	ldi	r24, 0x5B	; 91
+    1580:	97 e0       	ldi	r25, 0x07	; 7
+    1582:	2d e1       	ldi	r18, 0x1D	; 29
+    1584:	33 ef       	ldi	r19, 0xF3	; 243
+    1586:	41 e0       	ldi	r20, 0x01	; 1
+    1588:	50 e0       	ldi	r21, 0x00	; 0
+    158a:	0e 94 07 0b 	call	0x160e	; 0x160e <__divmodsi4>
+    158e:	49 01       	movw	r8, r18
+    1590:	5a 01       	movw	r10, r20
+    1592:	9b 01       	movw	r18, r22
+    1594:	ac 01       	movw	r20, r24
+    1596:	a7 ea       	ldi	r26, 0xA7	; 167
+    1598:	b1 e4       	ldi	r27, 0x41	; 65
+    159a:	0e 94 26 0b 	call	0x164c	; 0x164c <__muluhisi3>
+    159e:	6b 01       	movw	r12, r22
+    15a0:	7c 01       	movw	r14, r24
+    15a2:	ac ee       	ldi	r26, 0xEC	; 236
+    15a4:	b4 ef       	ldi	r27, 0xF4	; 244
+    15a6:	a5 01       	movw	r20, r10
+    15a8:	94 01       	movw	r18, r8
+    15aa:	0e 94 34 0b 	call	0x1668	; 0x1668 <__mulohisi3>
+    15ae:	c6 0e       	add	r12, r22
+    15b0:	d7 1e       	adc	r13, r23
+    15b2:	e8 1e       	adc	r14, r24
+    15b4:	f9 1e       	adc	r15, r25
+    15b6:	f7 fe       	sbrs	r15, 7
+    15b8:	06 c0       	rjmp	.+12     	; 0x15c6 <do_rand+0x74>
+    15ba:	81 e0       	ldi	r24, 0x01	; 1
+    15bc:	c8 1a       	sub	r12, r24
+    15be:	d1 08       	sbc	r13, r1
+    15c0:	e1 08       	sbc	r14, r1
+    15c2:	80 e8       	ldi	r24, 0x80	; 128
+    15c4:	f8 0a       	sbc	r15, r24
+    15c6:	c8 82       	st	Y, r12
+    15c8:	d9 82       	std	Y+1, r13	; 0x01
+    15ca:	ea 82       	std	Y+2, r14	; 0x02
+    15cc:	fb 82       	std	Y+3, r15	; 0x03
+    15ce:	c6 01       	movw	r24, r12
+    15d0:	9f 77       	andi	r25, 0x7F	; 127
+    15d2:	df 91       	pop	r29
+    15d4:	cf 91       	pop	r28
+    15d6:	ff 90       	pop	r15
+    15d8:	ef 90       	pop	r14
+    15da:	df 90       	pop	r13
+    15dc:	cf 90       	pop	r12
+    15de:	bf 90       	pop	r11
+    15e0:	af 90       	pop	r10
+    15e2:	9f 90       	pop	r9
+    15e4:	8f 90       	pop	r8
+    15e6:	08 95       	ret
+
+000015e8 <rand_r>:
+    15e8:	0e 94 a9 0a 	call	0x1552	; 0x1552 <do_rand>
+    15ec:	08 95       	ret
+
+000015ee <rand>:
+    15ee:	80 e0       	ldi	r24, 0x00	; 0
+    15f0:	91 e0       	ldi	r25, 0x01	; 1
+    15f2:	0e 94 a9 0a 	call	0x1552	; 0x1552 <do_rand>
+    15f6:	08 95       	ret
+
+000015f8 <srand>:
+    15f8:	a0 e0       	ldi	r26, 0x00	; 0
+    15fa:	b0 e0       	ldi	r27, 0x00	; 0
+    15fc:	80 93 00 01 	sts	0x0100, r24
+    1600:	90 93 01 01 	sts	0x0101, r25
+    1604:	a0 93 02 01 	sts	0x0102, r26
+    1608:	b0 93 03 01 	sts	0x0103, r27
+    160c:	08 95       	ret
+
+0000160e <__divmodsi4>:
+    160e:	05 2e       	mov	r0, r21
+    1610:	97 fb       	bst	r25, 7
+    1612:	1e f4       	brtc	.+6      	; 0x161a <__divmodsi4+0xc>
+    1614:	00 94       	com	r0
+    1616:	0e 94 1e 0b 	call	0x163c	; 0x163c <__negsi2>
+    161a:	57 fd       	sbrc	r21, 7
+    161c:	07 d0       	rcall	.+14     	; 0x162c <__divmodsi4_neg2>
+    161e:	0e 94 39 0b 	call	0x1672	; 0x1672 <__udivmodsi4>
+    1622:	07 fc       	sbrc	r0, 7
+    1624:	03 d0       	rcall	.+6      	; 0x162c <__divmodsi4_neg2>
+    1626:	4e f4       	brtc	.+18     	; 0x163a <__divmodsi4_exit>
+    1628:	0c 94 1e 0b 	jmp	0x163c	; 0x163c <__negsi2>
+
+0000162c <__divmodsi4_neg2>:
+    162c:	50 95       	com	r21
+    162e:	40 95       	com	r20
+    1630:	30 95       	com	r19
+    1632:	21 95       	neg	r18
+    1634:	3f 4f       	sbci	r19, 0xFF	; 255
+    1636:	4f 4f       	sbci	r20, 0xFF	; 255
+    1638:	5f 4f       	sbci	r21, 0xFF	; 255
+
+0000163a <__divmodsi4_exit>:
+    163a:	08 95       	ret
+
+0000163c <__negsi2>:
+    163c:	90 95       	com	r25
+    163e:	80 95       	com	r24
+    1640:	70 95       	com	r23
+    1642:	61 95       	neg	r22
+    1644:	7f 4f       	sbci	r23, 0xFF	; 255
+    1646:	8f 4f       	sbci	r24, 0xFF	; 255
+    1648:	9f 4f       	sbci	r25, 0xFF	; 255
+    164a:	08 95       	ret
+
+0000164c <__muluhisi3>:
+    164c:	0e 94 5b 0b 	call	0x16b6	; 0x16b6 <__umulhisi3>
+    1650:	a5 9f       	mul	r26, r21
+    1652:	90 0d       	add	r25, r0
+    1654:	b4 9f       	mul	r27, r20
+    1656:	90 0d       	add	r25, r0
+    1658:	a4 9f       	mul	r26, r20
+    165a:	80 0d       	add	r24, r0
+    165c:	91 1d       	adc	r25, r1
+    165e:	11 24       	eor	r1, r1
+    1660:	08 95       	ret
+
+00001662 <__mulshisi3>:
+    1662:	b7 ff       	sbrs	r27, 7
+    1664:	0c 94 26 0b 	jmp	0x164c	; 0x164c <__muluhisi3>
+
+00001668 <__mulohisi3>:
+    1668:	0e 94 26 0b 	call	0x164c	; 0x164c <__muluhisi3>
+    166c:	82 1b       	sub	r24, r18
+    166e:	93 0b       	sbc	r25, r19
+    1670:	08 95       	ret
+
+00001672 <__udivmodsi4>:
+    1672:	a1 e2       	ldi	r26, 0x21	; 33
+    1674:	1a 2e       	mov	r1, r26
+    1676:	aa 1b       	sub	r26, r26
+    1678:	bb 1b       	sub	r27, r27
+    167a:	fd 01       	movw	r30, r26
+    167c:	0d c0       	rjmp	.+26     	; 0x1698 <__udivmodsi4_ep>
+
+0000167e <__udivmodsi4_loop>:
+    167e:	aa 1f       	adc	r26, r26
+    1680:	bb 1f       	adc	r27, r27
+    1682:	ee 1f       	adc	r30, r30
+    1684:	ff 1f       	adc	r31, r31
+    1686:	a2 17       	cp	r26, r18
+    1688:	b3 07       	cpc	r27, r19
+    168a:	e4 07       	cpc	r30, r20
+    168c:	f5 07       	cpc	r31, r21
+    168e:	20 f0       	brcs	.+8      	; 0x1698 <__udivmodsi4_ep>
+    1690:	a2 1b       	sub	r26, r18
+    1692:	b3 0b       	sbc	r27, r19
+    1694:	e4 0b       	sbc	r30, r20
+    1696:	f5 0b       	sbc	r31, r21
+
+00001698 <__udivmodsi4_ep>:
+    1698:	66 1f       	adc	r22, r22
+    169a:	77 1f       	adc	r23, r23
+    169c:	88 1f       	adc	r24, r24
+    169e:	99 1f       	adc	r25, r25
+    16a0:	1a 94       	dec	r1
+    16a2:	69 f7       	brne	.-38     	; 0x167e <__udivmodsi4_loop>
+    16a4:	60 95       	com	r22
+    16a6:	70 95       	com	r23
+    16a8:	80 95       	com	r24
+    16aa:	90 95       	com	r25
+    16ac:	9b 01       	movw	r18, r22
+    16ae:	ac 01       	movw	r20, r24
+    16b0:	bd 01       	movw	r22, r26
+    16b2:	cf 01       	movw	r24, r30
+    16b4:	08 95       	ret
+
+000016b6 <__umulhisi3>:
+    16b6:	a2 9f       	mul	r26, r18
+    16b8:	b0 01       	movw	r22, r0
+    16ba:	b3 9f       	mul	r27, r19
+    16bc:	c0 01       	movw	r24, r0
+    16be:	a3 9f       	mul	r26, r19
+    16c0:	70 0d       	add	r23, r0
+    16c2:	81 1d       	adc	r24, r1
+    16c4:	11 24       	eor	r1, r1
+    16c6:	91 1d       	adc	r25, r1
+    16c8:	b2 9f       	mul	r27, r18
+    16ca:	70 0d       	add	r23, r0
+    16cc:	81 1d       	adc	r24, r1
+    16ce:	11 24       	eor	r1, r1
+    16d0:	91 1d       	adc	r25, r1
+    16d2:	08 95       	ret
+
+000016d4 <_exit>:
+    16d4:	f8 94       	cli
+
+000016d6 <__stop_program>:
+    16d6:	ff cf       	rjmp	.-2      	; 0x16d6 <__stop_program>
